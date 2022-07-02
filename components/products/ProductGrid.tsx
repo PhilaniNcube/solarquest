@@ -35,7 +35,7 @@ const Productgrid = () => {
               <div className=" flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full"></div>
               <img
                 className=" w-full"
-                src="/images/Rebel-EO-1-+.png"
+                src="/images/Rebel-EO-1-plus.png"
                 alt="Rebel EO 1 Plus"
               />
               <div className=" absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
