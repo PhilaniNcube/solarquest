@@ -11,12 +11,12 @@ const Hero = () => {
           alt="background"
           src="/images/solar_landscape.jpg"
         />
-        <div className="absolute inset-0 z-30 bg-slate-600/70">
-          <div className="max-w-7xl mx-auto py-12 flex flex-col justify-center h-full items-center">
-            <h1 className="text-white font-bold text-2xl md:text-4xl">
-              About Us
+        <div className="absolute inset-0 z-30 bg-slate-600/80">
+          <div className="max-w-7xl mx-auto py-12 h-full flex flex-col justify-center">
+            <h1 className="text-white font-bold text-2xl md:text-5xl">
+              Our Experience is your guarantee
             </h1>
-            <p className="text-white text-lg text-center px-12">
+            <p className="text-white text-md md:text-lg max-w-[50ch] mt-3">
               We provide the technology. As solar providers, we deliver the top
               technology in the industry. For systems, needs, and projects of
               all sizes on and beyond the grid.

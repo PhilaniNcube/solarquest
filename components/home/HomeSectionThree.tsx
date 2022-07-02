@@ -4,7 +4,7 @@ const HomeSectionThree = () => {
   return (
     <section>
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="bg-gradient-to-tr p-4 md:p-16 flex flex-col max-h-[60vh] items-end from-yellow-600 to-yellow-800 w-full h-full">
+        <div className="bg-red-600 p-4 md:p-16 flex flex-col max-h-[60vh] items-end  w-full h-full">
           <h2 className="text-white text-3xl font-bold md:text-3xl text-right">
             Move over to renewable <br />
             energy to power your home

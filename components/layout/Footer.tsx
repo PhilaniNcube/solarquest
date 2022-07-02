@@ -1,6 +1,6 @@
 const Footer = () => (
   <footer>
-    <div className="-mt-8 relative pt-6 bg-yellow-600">
+    <div className="relative pt-6 bg-red-600">
       <div className="max-w-7xl relative z-10 mx-auto lg:flex justify-between px-6 pt-8 lg:pt-32 pb-6 lg:pb-28">
         <div className="lg:w-1/4 pb-12 lg:pb-0">
           <img className="mb-8" src="/images/logo-lg.png" alt="logo" />
