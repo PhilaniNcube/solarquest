@@ -1,12 +1,16 @@
+import { getUser } from '@supabase/auth-helpers-nextjs'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+
 import Hero from '../components/home/Hero'
 import HomeSectionOne from '../components/home/HomeSectionOne'
 import HomeSectionThree from '../components/home/HomeSectionThree'
 import HomeSectionTwo from '../components/home/HomeSectionTwo'
 
 const Home: NextPage = () => {
+
+
   return (
     <>
       <Head>
@@ -22,3 +26,5 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+
