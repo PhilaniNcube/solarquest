@@ -1,5 +1,5 @@
 
- import { useUser } from "@supabase/auth-helpers-react";
+import { useUser } from "@supabase/auth-helpers-react";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 
