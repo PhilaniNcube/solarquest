@@ -138,7 +138,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   Remember Me
                 </label>
               </div>
-              <a className="text-xs text-red-600" href="javascript: void(0)">
+              <a className="text-xs text-red-600">
                 Forgot Password?
               </a>
             </div>
