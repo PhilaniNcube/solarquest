@@ -4,7 +4,8 @@ import Head from 'next/head'
 import Hero from '../components/home/Hero'
 import HomeSectionOne from '../components/home/HomeSectionOne'
 import HomeSectionThree from '../components/home/HomeSectionThree'
-import HomeSectionTwo from '../components/home/HomeSectionTwo'
+import HomeSectionTwo from '../components/home/HomeSolutions'
+import Solutions from '../components/home/Solutions'
 
 const Home: NextPage = () => {
 
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
       </Head>
        <Hero />
        <HomeSectionOne />
-       <HomeSectionTwo />
+       <Solutions />
        <HomeSectionThree />
     </>
   )

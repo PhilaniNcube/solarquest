@@ -1,13 +1,19 @@
 import Image from "next/future/image";
+import Link from "next/link";
+import {motion} from 'framer-motion'
 import { FunctionComponent } from "react";
 import { RiArrowDropRightFill, RiBatteryChargeFill, RiLayoutGridFill, RiRadio2Fill, RiTabletFill } from "react-icons/ri";
 
-const HomeSectionTwo: FunctionComponent = () => {
 
 
+const HomeSolutions: FunctionComponent = () => {
 
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="pt-16">
         <div className="w-full bg-red-50 py-12">
           <div className="max-w-7xl px-4 mx-auto">
@@ -25,8 +31,8 @@ const HomeSectionTwo: FunctionComponent = () => {
               <div className="w-full xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-1/2 mb-4">
                 <div className="py-8 px-10 bg-white mx-3 shadow rounded-lg text-center">
                   <Image
-                  height={500}
-                  width={500}
+                    height={500}
+                    width={500}
                     src="/images/arco.png"
                     alt="image"
                     className="mx-auto mb-8"
@@ -168,9 +174,11 @@ const HomeSectionTwo: FunctionComponent = () => {
                     </div>
                   </article>
                   <div className="flex justify-center">
-                    <button className="bg-white hover:bg-red-600 transition duration-150 ease-in-out hover:border-red-700 hover:text-red-100 rounded border border-red-600 text-red-600 px-8 py-3 text-sm">
-                      Enquire
-                    </button>
+                    <Link href="/contact">
+                      <button className="bg-white hover:bg-red-600 transition duration-150 ease-in-out hover:border-red-700 hover:text-red-100 rounded border border-red-600 text-red-600 px-8 py-3 text-sm">
+                        Enquire
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -178,8 +186,8 @@ const HomeSectionTwo: FunctionComponent = () => {
               <div className="w-full xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-1/2 mb-4">
                 <div className="py-8 px-10 bg-white mx-3 shadow rounded-lg text-center">
                   <Image
-                  height={500}
-                  width={500}
+                    height={500}
+                    width={500}
                     src="/images/arco.png"
                     alt="image"
                     className="mx-auto mb-8"
@@ -329,9 +337,11 @@ const HomeSectionTwo: FunctionComponent = () => {
                     </div>
                   </article>
                   <div className="flex justify-center">
-                    <button className="bg-white hover:bg-red-600 transition duration-150 ease-in-out hover:border-red-700 hover:text-red-100 rounded border border-red-600 text-red-600 px-8 py-3 text-sm">
-                      Enquire
-                    </button>
+                    <Link href="/contact">
+                      <button className="bg-white hover:bg-red-600 transition duration-150 ease-in-out hover:border-red-700 hover:text-red-100 rounded border border-red-600 text-red-600 px-8 py-3 text-sm">
+                        Enquire
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -339,8 +349,8 @@ const HomeSectionTwo: FunctionComponent = () => {
               <div className="w-full xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-1/2 mb-4">
                 <div className="py-8 px-10 bg-white mx-3 shadow rounded-lg text-center">
                   <Image
-                  height={500}
-                  width={500}
+                    height={500}
+                    width={500}
                     src="/images/arco.png"
                     alt="image"
                     className="mx-auto mb-8"
@@ -546,17 +556,19 @@ const HomeSectionTwo: FunctionComponent = () => {
                     </div>
                   </article>
                   <div className="flex justify-center">
-                    <button className="bg-white hover:bg-red-600 transition duration-150 ease-in-out hover:border-red-700 hover:text-red-100 rounded border border-red-600 text-red-600 px-8 py-3 text-sm">
-                      Enquire
-                    </button>
+                    <Link href="/contact">
+                      <button className="bg-white hover:bg-red-600 transition duration-150 ease-in-out hover:border-red-700 hover:text-red-100 rounded border border-red-600 text-red-600 px-8 py-3 text-sm">
+                        Enquire
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
               <div className="w-full xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-1/2 mb-4">
                 <div className="py-8 px-10 bg-white mx-3 shadow rounded-lg text-center">
                   <Image
-                  height={500}
-                  width={500}
+                    height={500}
+                    width={500}
                     src="/images/arco.png"
                     alt="image"
                     className="mx-auto mb-8"
@@ -762,9 +774,11 @@ const HomeSectionTwo: FunctionComponent = () => {
                     </div>
                   </article>
                   <div className="flex justify-center">
-                    <button className="bg-white hover:bg-red-600 transition duration-150 ease-in-out hover:border-red-700 hover:text-red-100 rounded border border-red-600 text-red-600 px-8 py-3 text-sm">
-                      Enquire
-                    </button>
+                    <Link href="/contact">
+                      <button className="bg-white hover:bg-red-600 transition duration-150 ease-in-out hover:border-red-700 hover:text-red-100 rounded border border-red-600 text-red-600 px-8 py-3 text-sm">
+                        Enquire
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -772,7 +786,7 @@ const HomeSectionTwo: FunctionComponent = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
-export default HomeSectionTwo;
+export default HomeSolutions;

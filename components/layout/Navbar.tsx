@@ -1,6 +1,7 @@
 
 import { useUser } from "@supabase/auth-helpers-react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/future/image";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import { RiCloseFill, RiMenu3Fill } from "react-icons/ri";
@@ -45,8 +46,8 @@ const Navbar = () => {
       >
         <Link href="/">
           <img
-            src="./images/logo-red.png"
-            alt="Solar Quest"
+            src="/images/logo-red.png"
+            alt="Solarquest"
             className="h-12 object-cover"
           />
         </Link>
@@ -68,25 +69,30 @@ const Navbar = () => {
           </span>
           {!user ? (
             <Fragment>
-              <Link href="/sign-in">
+              <Link href="/contact">
                 <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
-                  Login
+                  Get in touch
                 </button>
               </Link>
 
-              <Link href="/register">
+              {/* <Link href="/register">
                 <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
                   Register
                 </button>
-              </Link>
+              </Link> */}
             </Fragment>
           ) : (
             <Fragment>
-              <Link href="/api/auth/logout">
+              <Link href="/contact">
+                <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
+                  Get in touch
+                </button>
+              </Link>
+              {/* <Link href="/api/auth/logout">
                 <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
                   Logout
                 </button>
-              </Link>
+              </Link> */}
             </Fragment>
           )}
         </div>

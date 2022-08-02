@@ -1,0 +1,138 @@
+import React from "react";
+
+const ContactForm = () => {
+
+   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+     e.preventDefault();
+   };
+
+  return (
+    <div>
+      <form className="w-full" onSubmit={handleSubmit}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="flex flex-col">
+            <label
+              className="text-gray-600 text-sm font-medium"
+              htmlFor="first_name"
+            >
+              First Name
+            </label>
+            <input
+              className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+              type="text"
+              placeholder="First Name"
+              required
+              id="first_name"
+              name="first_name"
+            />
+          </div>
+          <div className="flex flex-col">
+            <label
+              className="placeholder:text-slate-700 text-sm font-medium"
+              htmlFor="last_name"
+            >
+              Last Name
+            </label>
+            <input
+              className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+              type="text"
+              placeholder="Last Name"
+              required
+              id="last_name"
+              name="last_name"
+            />
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+          <div className="flex flex-col">
+            <label
+              className="placeholder:text-slate-700 text-sm font-medium"
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+              type="email"
+              placeholder="Email Address"
+              required
+              id="email"
+              name="email"
+            />
+          </div>
+          <div className="flex flex-col">
+            <label
+              className="placeholder:text-slate-700 text-sm font-medium"
+              htmlFor="telephone"
+            >
+              Contact Number
+            </label>
+            <input
+              className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+              type="tel"
+              placeholder="Phone Number"
+              required
+              id="telephone"
+              name="telephone"
+            />
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+          <div className="flex flex-col">
+            <label
+              className="placeholder:text-slate-700 text-sm font-medium "
+              htmlFor="electricty"
+            >
+              What is your current electricty bill?
+            </label>
+            <select
+              className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+              placeholder="Phone Number"
+              required
+              id="electricty"
+              name="electricty"
+            >
+              <option value="Less than R1500">Less than R1500</option>
+              <option value="R1500-R2500">R1500-R2500</option>
+              <option value="R2501-R4500">R2501-R4500</option>
+              <option value="Greater than R4500">Greater than R4500</option>
+            </select>
+          </div>
+          <div className="flex flex-col">
+            <label
+              className="placeholder:text-slate-700 text-sm font-medium "
+              htmlFor="province"
+            >
+              Province
+            </label>
+            <select
+              className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+              placeholder="Phone Number"
+              required
+              id="province"
+              name="province"
+            >
+              <option value="Gauteng">Gauteng</option>
+              <option value="Western Cape">Western Cape</option>
+              <option value="KZN">KZN</option>
+              <option value="Eastern Cape">Eastern Cape</option>
+              <option value="Mpumalanga">Mpumalanga</option>
+              <option value="Limpopo">Limpopo</option>
+              <option value="Free State">Free State</option>
+              <option value="Northern Cape">Northern Cape</option>
+              <option value="North West">North West</option>
+            </select>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          className="bg-red-600 py-2 px-6 mt-4 rounded-full text-white font-medium text-lg"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+};
+export default ContactForm;
