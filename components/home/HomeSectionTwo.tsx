@@ -1,3 +1,4 @@
+import Image from "next/future/image";
 import { FunctionComponent } from "react";
 import { RiArrowDropRightFill, RiBatteryChargeFill, RiLayoutGridFill, RiRadio2Fill, RiTabletFill } from "react-icons/ri";
 
@@ -23,7 +24,9 @@ const HomeSectionTwo: FunctionComponent = () => {
             <div className="flex flex-wrap mb-12 justify-between sm:justify-center">
               <div className="w-full xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-1/2 mb-4">
                 <div className="py-8 px-10 bg-white mx-3 shadow rounded-lg text-center">
-                  <img
+                  <Image
+                  height={500}
+                  width={500}
                     src="/images/arco.png"
                     alt="image"
                     className="mx-auto mb-8"
@@ -174,7 +177,9 @@ const HomeSectionTwo: FunctionComponent = () => {
 
               <div className="w-full xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-1/2 mb-4">
                 <div className="py-8 px-10 bg-white mx-3 shadow rounded-lg text-center">
-                  <img
+                  <Image
+                  height={500}
+                  width={500}
                     src="/images/arco.png"
                     alt="image"
                     className="mx-auto mb-8"
@@ -333,7 +338,9 @@ const HomeSectionTwo: FunctionComponent = () => {
 
               <div className="w-full xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-1/2 mb-4">
                 <div className="py-8 px-10 bg-white mx-3 shadow rounded-lg text-center">
-                  <img
+                  <Image
+                  height={500}
+                  width={500}
                     src="/images/arco.png"
                     alt="image"
                     className="mx-auto mb-8"
@@ -547,7 +554,9 @@ const HomeSectionTwo: FunctionComponent = () => {
               </div>
               <div className="w-full xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-1/2 mb-4">
                 <div className="py-8 px-10 bg-white mx-3 shadow rounded-lg text-center">
-                  <img
+                  <Image
+                  height={500}
+                  width={500}
                     src="/images/arco.png"
                     alt="image"
                     className="mx-auto mb-8"

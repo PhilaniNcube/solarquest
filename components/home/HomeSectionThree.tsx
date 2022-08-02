@@ -1,3 +1,4 @@
+import Image from "next/future/image";
 import Link from "next/link";
 
 const HomeSectionThree = () => {
@@ -24,7 +25,9 @@ const HomeSectionThree = () => {
           </Link>
         </div>
         <div className="w-full h-full">
-          <img
+          <Image
+            width={1920}
+            height={1080}
             src="/images/solar_panels.jpg"
             alt="panels"
             className="block w-full h-full object-cover"
