@@ -2,7 +2,7 @@ import Image from "next/future/image";
 
 const AboutSectionTwo = () => {
   return (
-    <section className="py-8">
+    <section className="py-8 px-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
         <div className="flex flex-col justify-center items-center">
           <p className="text-lg md:text-xl font-medium text-red-600 mt-4 ">

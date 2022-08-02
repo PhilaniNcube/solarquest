@@ -1,16 +1,25 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import AboutSectionOne from "../components/about/AboutSectionOne";
 import AboutSectionTwo from "../components/about/AboutSectionTwo";
 import Hero from "../components/about/Hero";
 
 const about: NextPage = () => {
   return (
-          <>
-            <Hero />
-            <AboutSectionOne />
-            <AboutSectionTwo />
-          </>
-          )
+    <>
+      <Head>
+        <title> About | Solarquest</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
+      <Hero />
+      <AboutSectionOne />
+      <AboutSectionTwo />
+    </>
+  );
 
 };
 export default about;

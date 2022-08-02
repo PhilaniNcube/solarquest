@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/future/image";
 
 const Hero = () => {
   return (
@@ -11,7 +11,7 @@ const Hero = () => {
           alt="background"
           src="/images/solar_landscape.jpg"
         />
-        <div className="absolute inset-0 z-30 bg-slate-600/80">
+        <div className="absolute inset-0 z-30 px-4 bg-slate-600/80">
           <div className="max-w-7xl mx-auto py-12 h-full flex flex-col justify-center">
             <h1 className="text-white font-bold text-2xl md:text-5xl">
               Our Experience is your guarantee

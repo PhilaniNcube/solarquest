@@ -1,13 +1,19 @@
 
 import { useUser } from "@supabase/auth-helpers-react";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
+import { RiCloseFill, RiMenu3Fill } from "react-icons/ri";
 
 
 
 const Navbar = () => {
 
   const { isLoading, user, error } = useUser();
+
+  const [open, setOpen] = useState(false)
+
+  console.log(user)
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
@@ -27,7 +33,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full transition-colors duration-500 ${
+      className={`z-50 w-full transition-colors duration-500 ${
         scrollPosition > 100 ? "bg-zinc-800/75" : "bg-zinc-800"
       }`}
     >
@@ -70,32 +76,12 @@ const Navbar = () => {
 
               <Link href="/register">
                 <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
-                  Get Started
-                </button>
-              </Link>
-            </Fragment>
-          ) : error ? (
-            <Fragment>
-              <Link href="/products">
-                <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
-                  Products
-                </button>
-              </Link>
-
-              <Link href="/about">
-                <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
-                  About Us
+                  Register
                 </button>
               </Link>
             </Fragment>
           ) : (
             <Fragment>
-              <Link href="/register">
-                <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
-                  Get Started
-                </button>
-              </Link>
-
               <Link href="/api/auth/logout">
                 <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
                   Logout
@@ -106,6 +92,104 @@ const Navbar = () => {
         </div>
       </nav>
       {/* Desktop Nav Ends */}
+
+      {/**Mobile Navigation**/}
+      <nav className="flex md:hidden justify-between py-3 px-4">
+        <Link href="/">
+          <img
+            className="h-8 object-cover"
+            alt="logo"
+            src="/images/logo-red.png"
+          />
+        </Link>
+
+        <RiMenu3Fill
+          className="h-8 w-8 text-red-600"
+          onClick={() => setOpen(!open)}
+        />
+        <AnimatePresence exitBeforeEnter>
+          {open && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute top-0 left-0 w-screen bg-red-600 h-screen flex z-50"
+            >
+              <RiCloseFill
+                className="absolute top-10 left-10 h-8 w-8 text-white"
+                onClick={() => setOpen(false)}
+              />
+              <div className="flex flex-col px-6 space-y-4 justify-between items-center py-8 w-full">
+                <Link href="/">
+                  <a
+                    className="text-white font-medium text-xl"
+                    onClick={() => setOpen(false)}
+                  >
+                    Home
+                  </a>
+                </Link>
+                <Link href="/products">
+                  <a
+                    className="text-white font-medium text-xl"
+                    onClick={() => setOpen(false)}
+                  >
+                    Products
+                  </a>
+                </Link>
+                <Link href="/about">
+                  <a
+                    className="text-white font-medium text-xl"
+                    onClick={() => setOpen(false)}
+                  >
+                    About
+                  </a>
+                </Link>
+                <Link href="/contact">
+                  <a
+                    className="text-white font-medium text-xl"
+                    onClick={() => setOpen(false)}
+                  >
+                    Contact
+                  </a>
+                </Link>
+                <div className="w-full items-center py-4 rounded flex flex-col space-y-4">
+                  {user ? (
+                    <>
+                      <Link href="/api/auth/logout">
+                        <a
+                          onClick={() => setOpen(false)}
+                          className="text-white font-medium text-xl w-full bg-gray-700 text-center py-2 rounded-lg "
+                        >
+                          Logout
+                        </a>
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      <Link href="/sign-in">
+                        <a
+                          onClick={() => setOpen(false)}
+                          className="text-white font-medium text-xl w-full bg-green-700 text-center py-2 rounded-lg"
+                        >
+                          Sign In
+                        </a>
+                      </Link>
+                      <Link href="/register">
+                        <a
+                          onClick={() => setOpen(false)}
+                          className="text-red-600 font-medium text-xl w-full bg-white text-center py-2 rounded-lg"
+                        >
+                          Register
+                        </a>
+                      </Link>
+                    </>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
     </header>
   );
 };
