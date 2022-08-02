@@ -10,7 +10,9 @@ const Hero : FunctionComponent = () => {
           width={1920}
           height={1080}
           className="h-full object-cover"
+          quality={50}
           alt="background"
+          priority={true}
           src="/images/solar_landscape.jpg"
         />
         <div className="absolute inset-0 z-30 px-4 bg-slate-600/80">
