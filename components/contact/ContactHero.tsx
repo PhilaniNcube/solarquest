@@ -115,6 +115,22 @@ const ContactHero = () => {
                 />
               </div>
             </div>
+            <div className="flex flex-col mt-4">
+              <label
+                className="placeholder:text-slate-700 text-sm font-medium"
+                htmlFor="address"
+              >
+                Address
+              </label>
+              <input
+                className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+                type="text"
+                placeholder="Address"
+                required
+                id="address"
+                name="address"
+              />
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
               <div className="flex flex-col">
                 <label
@@ -136,34 +152,15 @@ const ContactHero = () => {
                   <option value="Greater than R4500">Greater than R4500</option>
                 </select>
               </div>
-              <div className="flex flex-col">
-                <label
-                  className="placeholder:text-slate-700 text-sm font-medium "
-                  htmlFor="province"
-                >
-                 Province
-                </label>
-                <select
-                  className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
-                  placeholder="Phone Number"
-                  required
-                  id="province"
-                  name="province"
-                >
-                  <option value="Gauteng">Gauteng</option>
-                  <option value="Western Cape">Western Cape</option>
-                  <option value="KZN">KZN</option>
-                  <option value="Eastern Cape">Eastern Cape</option>
-                  <option value="Mpumalanga">Mpumalanga</option>
-                  <option value="Limpopo">Limpopo</option>
-                  <option value="Free State">Free State</option>
-                  <option value="Northern Cape">Northern Cape</option>
-                  <option value="North West">North West</option>
-                </select>
-              </div>
+
             </div>
 
-            <button type="submit" className="bg-red-600 py-2 px-6 mt-4 rounded-full text-white font-medium text-lg">Submit</button>
+            <button
+              type="submit"
+              className="bg-red-600 py-2 px-6 mt-4 rounded-full text-white font-medium text-lg"
+            >
+              Submit
+            </button>
           </form>
         </div>
       </div>

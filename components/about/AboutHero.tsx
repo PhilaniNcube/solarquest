@@ -34,9 +34,9 @@ const AboutHero = () => {
       <div className="lg:mt-14 sm:mt-7 mt-14">
         <div className="flex lg:flex-row flex-col items-center">
           <div className="w-full lg:w-7/12">
-            <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-red-600">
+            <h1 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-red-600">
               Our Story
-            </h2>
+            </h1>
             <p className="pr-6 font-normal text-sm leading-6 text-gray-600 mt-6 w-full xl:w-9/12">
               We entered the industry in 1982 while solar technology was still
               in its infancy. More than 55,000 installations and 39 years later
@@ -51,6 +51,7 @@ const AboutHero = () => {
             </p>
           </div>
           <div className="lg:pt-16 xl:pt-0 cursor-pointer w-full lg:w-5/12 lg:mt-0 sm:mt-10 mt-8">
+
             <ContactForm />
           </div>
         </div>
