@@ -161,32 +161,24 @@ const Navbar = () => {
                 <div className="w-full items-center py-4 rounded flex flex-col space-y-4">
                   {user ? (
                     <>
-                      <Link href="/api/auth/logout">
-                        <a
+                      <Link href="/contact">
+                        <button
                           onClick={() => setOpen(false)}
-                          className="text-white font-medium text-xl w-full bg-gray-700 text-center py-2 rounded-lg "
+                          className="ml-4 bg-white rounded-full px-6 font-bold py-2 text-red-600"
                         >
-                          Logout
-                        </a>
+                          Get in touch
+                        </button>
                       </Link>
                     </>
                   ) : (
                     <>
-                      <Link href="/sign-in">
-                        <a
+                      <Link href="/contact">
+                        <button
                           onClick={() => setOpen(false)}
-                          className="text-white font-medium text-xl w-full bg-green-700 text-center py-2 rounded-lg"
+                          className="ml-4 bg-white rounded-full px-6 font-bold py-2 text-red-600"
                         >
-                          Sign In
-                        </a>
-                      </Link>
-                      <Link href="/register">
-                        <a
-                          onClick={() => setOpen(false)}
-                          className="text-red-600 font-medium text-xl w-full bg-white text-center py-2 rounded-lg"
-                        >
-                          Register
-                        </a>
+                          Get in touch
+                        </button>
                       </Link>
                     </>
                   )}

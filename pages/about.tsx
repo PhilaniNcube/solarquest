@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import AboutHero from "../components/about/AboutHero";
-import AboutSectionOne from "../components/about/AboutSectionOne";
+import Team from "../components/about/Team";
 import AboutSectionTwo from "../components/about/AboutSectionTwo";
 import Hero from "../components/about/Hero";
+import Partners from "../components/about/Partners";
 
 const about: NextPage = () => {
   return (
@@ -17,8 +18,8 @@ const about: NextPage = () => {
         />
       </Head>
       <AboutHero />
-
-
+      <Team />
+      <Partners />
     </>
   );
 

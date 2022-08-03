@@ -18,7 +18,7 @@ const ContactForm = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="flex flex-col">
             <label
-              className="text-gray-600 text-sm font-medium"
+              className="placeholder:text-slate-700 text-sm font-medium"
               htmlFor="first_name"
             >
               First Name

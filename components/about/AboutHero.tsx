@@ -5,9 +5,9 @@ const AboutHero = () => {
   return (
     <div className="max-w-7xl mx-auto md:px-6 py-9 px-4">
       <div className="relative">
-        <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute bg-gray-700/30 top-0 left-0 w-full h-full">
           <div className="w-full h-full flex flex-col justify-center items-center bg-indigo-700 bg-opacity-20 text-white sm:px-12 px-6 rounded-md">
-            <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7">
+            <h2 className="font-bold lg:text-6xl uppercase text-3xl lg:leading-9 leading-7">
               About Solarquest
             </h2>
           </div>
@@ -37,21 +37,20 @@ const AboutHero = () => {
             <h1 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-red-600">
               Our Story
             </h1>
-            <p className="pr-6 font-normal text-sm leading-6 text-gray-600 mt-6 w-full xl:w-9/12">
+            <p className="pr-6 font-normal text-lg leading-6 text-gray-600 mt-6 w-full xl:w-9/12">
               We entered the industry in 1982 while solar technology was still
               in its infancy. More than 55,000 installations and 39 years later
               we still carry that innovative spark; harnessing clean and
               affordable technology to improve access to renewable energy across
               the globe.
             </p>
-            <p className="pr-6 font-normal text-sm leading-6 text-gray-600 w-full xl:w-9/12 mt-6">
+            <p className="pr-6 font-normal text-lg leading-6 text-gray-600 w-full xl:w-9/12 mt-6">
               From household to national projects, we are solution based and
               future focused, looking for ways to reshape how homes, villages,
               and cities are powered.
             </p>
           </div>
           <div className="lg:pt-16 xl:pt-0 cursor-pointer w-full lg:w-5/12 lg:mt-0 sm:mt-10 mt-8">
-
             <ContactForm />
           </div>
         </div>

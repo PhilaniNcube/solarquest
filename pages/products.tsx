@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Productgrid from "../components/products/ProductGrid";
+import Products from "../components/products/Products";
 import ProductsHero from "../components/products/ProductsHero";
 
 const products: NextPage = () => {
@@ -15,7 +16,7 @@ const products: NextPage = () => {
         />
       </Head>
       <ProductsHero />
-      <Productgrid />
+      <Products />
     </>
   );
 };
