@@ -19,7 +19,7 @@ const BusinessSolutions: FunctionComponent = () => {
       exit={{ opacity: 0 }}
     >
       <div className="pt-16">
-        <div className="w-full bg-blue-50 py-12">
+        <div className="w-full bg-gradient-to-bl from-sky-200 to-red-100 py-12">
           <div className="max-w-7xl px-4 mx-auto">
             <div className="xl:w-4/5 w-11/12 mx-auto mb-12">
               <h1 className="lg:text-4xl text-3xl text-center text-blue-600 mb-4 font-extrabold">

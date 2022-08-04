@@ -5,26 +5,26 @@ const AboutHero = () => {
   return (
     <div className="max-w-7xl mx-auto md:px-6 py-9 px-4">
       <div className="relative">
-        <div className="absolute bg-gray-700/30 top-0 left-0 w-full h-full">
+        <div className="absolute bg-gray-700/30 top-0 left-0 w-full overflow-hidden rounded-md h-full">
           <div className="w-full h-full flex flex-col justify-center items-center bg-indigo-700 bg-opacity-20 text-white sm:px-12 px-6 rounded-md">
             <h2 className="font-bold lg:text-6xl uppercase text-3xl lg:leading-9 leading-7">
               About Solarquest
             </h2>
           </div>
         </div>
-        <div>
+        <div className="overflow-hidden">
           <img
-            className="rounded-md lg:block hidden w-full object-cover aspect-video"
+            className="rounded-md lg:block hidden w-full h-[30vh] object-cover aspect-video"
             src="/images/about-landscape.jpeg"
             alt="Solar Power"
           />
           <img
-            className="rounded-md lg:hidden sm:block hidden w-full"
+            className="rounded-md lg:hidden sm:block hidden h-[30vh] w-full"
             src="/images/about-square.jpeg"
             alt="Solar Power"
           />
           <img
-            className="rounded-md sm:hidden block w-full"
+            className="rounded-md sm:hidden block h-[30vh] w-full"
             src="/images/about-portrait.jpeg"
             alt="Solar Power"
           />

@@ -55,16 +55,16 @@ const Navbar = () => {
         <div className="flex items-center">
           <span className="flex space-x-3 text-white text-base">
             <Link href="/">
-              <a className="uppercase">Home</a>
+              <a className="text-md hover:text-red-500 font-bold">Home</a>
             </Link>
             <Link href="/about">
-              <a className="uppercase">About Us</a>
+              <a className="text-md hover:text-red-500 font-bold">About Us</a>
             </Link>
             <Link href="/products">
-              <a className="uppercase">Products</a>
+              <a className="text-md hover:text-red-500 font-bold">Products</a>
             </Link>
             <Link href="/contact">
-              <a className="uppercase">Contact</a>
+              <a className="text-md hover:text-red-500 font-bold">Contact</a>
             </Link>
           </span>
           {!user ? (

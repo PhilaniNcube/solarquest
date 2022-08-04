@@ -7,11 +7,11 @@ import HomeSectionTwo from "./HomeSolutions";
 
 const Solutions = () => {
 
-  const [enabled, setEnabled] = useState(false);
+  const [enabled, setEnabled] = useState(true);
 
   return (
     <>
-    <div className="flex w-[230px] mx-auto px-4 justify-between">
+    <div className="flex w-[230px] mx-auto px-6 justify-between">
       <h2 className="text-red-600 font-bold text-2xl">Home</h2>
 
       <h2 className="text-blue-700 font-bold text-2xl">Business</h2>

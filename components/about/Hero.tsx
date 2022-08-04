@@ -2,7 +2,7 @@ import Image from "next/future/image";
 
 const Hero = () => {
   return (
-    <header className="bg-slate-500">
+    <header className="bg-slate-500 px-4">
       <div className="max-h-screen overflow-hidden relative">
         <Image
           width={1920}

@@ -2,6 +2,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Hero from '../components/home/Hero'
+import HomeSectionFour from '../components/home/HomeSectionFour'
 import HomeSectionOne from '../components/home/HomeSectionOne'
 import HomeSectionThree from '../components/home/HomeSectionThree'
 import Solutions from '../components/home/Solutions'
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
        <HomeSectionOne />
        <Solutions />
        <HomeSectionThree />
+       <HomeSectionFour />
     </>
   )
 }

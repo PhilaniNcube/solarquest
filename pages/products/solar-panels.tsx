@@ -9,7 +9,7 @@ const SolarPanels = () => {
   return (
     <motion.section
       layoutId="solarPanels"
-      className="max-w-7xl mx-auto min-h-screen my-8 px-4 lg:px-0"
+      className="max-w-7xl mx-auto min-h-screen my-8 px-4"
     >
       <Image
         src="/images/panels_preview.jpg"

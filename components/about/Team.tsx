@@ -3,7 +3,7 @@ import Image from "next/future/image";
 const Team = () => {
   return (
     <section>
-      <div className="max-w-7xl flex justify-center mx-auto py-6">
+      <div className="max-w-7xl flex justify-center mx-auto py-6 px-4">
         <div>
 
           <h1 className="xl:text-4xl text-3xl text-center text-red-600 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">

@@ -8,7 +8,7 @@ const Products = () => {
 
   return (
     <section className="my-6">
-      <div className="mx-auto max-w-7xl px-4 md:px-2 lg:px-0">
+      <div className="mx-auto max-w-7xl px-4">
         <h2 className="text-3xl  font-medium text-red-600">
           Renewable Energy from the sun
         </h2>
