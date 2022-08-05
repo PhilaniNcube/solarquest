@@ -1,11 +1,16 @@
 import Image from "next/future/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { RiMailAddLine, RiMapPin2Line, RiPhoneCameraLine, RiPhoneLine } from "react-icons/ri";
 
 const ContactHero = () => {
 
+  const router = useRouter()
+
  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
    e.preventDefault();
+
+   router.push('/thankyou')
  }
 
   return (

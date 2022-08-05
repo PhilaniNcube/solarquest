@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 export default function Cookie() {
 
-  const [open, setOpen] = useState(false)
+const [open, setOpen] = useState(false)
 
   return (
     <div className="absolute bottom-10 right-10">

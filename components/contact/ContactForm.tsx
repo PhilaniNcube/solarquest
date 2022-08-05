@@ -1,9 +1,14 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 const ContactForm = () => {
 
+   const router = useRouter();
+
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
      e.preventDefault();
+
+     router.push("/thankyou");
    };
 
   return (
