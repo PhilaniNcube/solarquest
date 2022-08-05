@@ -12,7 +12,7 @@ const SolarPanels = () => {
       className="max-w-7xl mx-auto min-h-screen my-8 px-4"
     >
       <Image
-        src="/images/panels_preview.jpg"
+        src="/images/panels_preview.jpeg"
         width={1024}
         height={683}
         className="w-full h-[55vh] object-cover object-top aspect-video rounded-lg"

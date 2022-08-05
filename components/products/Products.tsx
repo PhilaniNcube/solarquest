@@ -34,7 +34,7 @@ const Products = () => {
             onClick={() => router.push("/products/solar-panels")}
           >
             <Image
-              src="/images/panels_preview.jpg"
+              src="/images/panels_preview.jpeg"
               width={1024}
               height={683}
               className="w-full object-cover aspect-video rounded-lg"
@@ -61,7 +61,7 @@ const Products = () => {
             onClick={() => router.push("/products/batteries")}
           >
             <Image
-              src="/images/batteries-preview.jpg"
+              src="/images/batteries-preview.jpeg"
               width={1024}
               height={683}
               className="w-full object-cover aspect-video rounded-lg"
@@ -85,7 +85,7 @@ const Products = () => {
             onClick={() => router.push("/products/inverters")}
           >
             <Image
-              src="/images/inverters-preview.jpg"
+              src="/images/inverters-preview.jpeg"
               width={1024}
               height={683}
               className="w-full object-cover aspect-video rounded-lg"
