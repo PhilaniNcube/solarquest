@@ -8,7 +8,7 @@ const Products = () => {
 
   return (
     <section className="my-6">
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="mx-auto max-w-7xl px-8">
         <h2 className="text-3xl  font-medium text-red-600">
           Renewable Energy from the sun
         </h2>
@@ -18,7 +18,7 @@ const Products = () => {
           informed decision. Harnessing the power of the sun has become more and
           more affordable over the past decade. The technology of photovoltaic
           panels and battery storage has progressed in leaps and bounds. This
-          development has meant that powering your home or business usig solar
+          development has meant that powering your home or business using solar
           energy has improved to the point where it can be cheaper that getting
           your power from the traditional power grid.
         </p>
@@ -40,19 +40,26 @@ const Products = () => {
               className="w-full object-cover aspect-video rounded-lg"
               alt="Solar Panels"
             />
-            <p className="text-red-600 font-bold text-2xl mt-3">Solar Panels</p>
-            <p className="text-gray-600 font-medium text-sm mt-1">
-              Solar Panels, or more technically photovoltaic cells are used to
-              collect energy from the sun and turn it into electricity. Solar
-              panels do not need direct sunlight to generate electricity as some
-              may assume.
-            </p>
-            <button
-              className="mt-2 bg-red-600 text-white font-medium text-md px-6 py-2 rounded"
-              onClick={() => router.push("/products/solar-panels")}
-            >
-              Read more
-            </button>
+            <div className="min-h-[210px] flex flex-col justify-between ">
+              <div>
+                <p className="text-red-600 font-bold text-2xl mt-3">
+                  Solar Panels
+                </p>
+                <p className="text-gray-600 font-medium text-sm mt-1">
+                  Solar Panels, or more technically photovoltaic cells are used
+                  to collect energy from the sun and turn it into electricity.
+                  Solar panels do not need direct sunlight to generate
+                  electricity as some may assume.
+                </p>
+              </div>
+
+              <button
+                className="mt-2 bg-red-600 max-w-[180px] text-white font-medium text-md px-6 py-2 rounded"
+                onClick={() => router.push("/products/solar-panels")}
+              >
+                Read more
+              </button>
+            </div>
           </motion.div>
           <motion.div
             id="batteries"
@@ -67,16 +74,26 @@ const Products = () => {
               className="w-full object-cover aspect-video rounded-lg"
               alt="Batteries"
             />
-            <p className="text-red-600 font-bold text-2xl mt-3">Batteries</p>
-            <p className="text-gray-600 font-medium text-sm mt-1">
-              The main drawback of solar energy and other renewable energy applications is that the energy is not available 24 hours a day. This is where batteries come in. During the day that solar panels produce excess energy that is then stored in these batteries.
-            </p>
-            <button
-              className="mt-2 bg-red-600 text-white font-medium text-md px-6 py-2 rounded"
-              onClick={() => router.push("/products/batteries")}
-            >
-              Read more
-            </button>
+            <div className="min-h-[210px] flex flex-col justify-between ">
+              <div>
+                <p className="text-red-600 font-bold text-2xl mt-3">
+                  Batteries
+                </p>
+                <p className="text-gray-600 font-medium text-sm mt-1">
+                  The main drawback of solar energy and other renewable energy
+                  applications is that the energy is not available 24 hours a
+                  day. This is where batteries come in. During the day that
+                  solar panels produce excess energy that is then stored in
+                  these batteries.
+                </p>
+              </div>
+              <button
+                className="mt-2 bg-red-600 max-w-[180px] text-white font-medium text-md px-6 py-2 rounded"
+                onClick={() => router.push("/products/batteries")}
+              >
+                Read more
+              </button>
+            </div>
           </motion.div>
           <motion.div
             id="inverters"
@@ -91,16 +108,24 @@ const Products = () => {
               className="w-full object-cover aspect-video rounded-lg"
               alt="Inverters"
             />
-            <p className="text-red-600 font-bold text-2xl mt-3">Inverters</p>
-            <p className="text-gray-600 font-medium text-sm mt-1">
-            Inverters are electronic devices used to convert Direct Current coming from the batteries in a Solar Power Installation into Alternating Current.
-            </p>
-            <button
-              className="mt-2 bg-red-600 text-white font-medium text-md px-6 py-2 rounded"
-              onClick={() => router.push("/products/inverters")}
-            >
-              Read more
-            </button>
+            <div className="min-h-[210px] flex flex-col justify-between ">
+              <div>
+                <p className="text-red-600 font-bold text-2xl mt-3">
+                  Inverters
+                </p>
+                <p className="text-gray-600 font-medium text-sm mt-1">
+                  Inverters are electronic devices used to convert Direct
+                  Current coming from the batteries in a Solar Power
+                  Installation into Alternating Current.
+                </p>
+              </div>
+              <button
+                className="mt-2 bg-red-600 max-w-[180px] text-white font-medium text-md px-6 py-2 rounded"
+                onClick={() => router.push("/products/inverters")}
+              >
+                Read more
+              </button>
+            </div>
           </motion.div>
         </div>
       </div>
