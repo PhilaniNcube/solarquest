@@ -12,7 +12,7 @@ const Team = () => {
       </div>
       <div className="w-full px-10">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-y-24 gap-x-8 lg:grid-cols-3 2xl:grid-cols-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-24 gap-x-8 lg:grid-cols-3 2xl:grid-cols-4">
             <div className="w-full relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
                 <Image
