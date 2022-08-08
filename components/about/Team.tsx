@@ -5,16 +5,15 @@ const Team = () => {
     <section id="team">
       <div className="max-w-7xl flex justify-center mx-auto py-6 px-4">
         <div>
-
           <h1 className="xl:text-4xl text-3xl text-center text-red-600 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
             The Talented People Behind Solarquest
           </h1>
         </div>
       </div>
       <div className="w-full px-10">
-        <div className="container mx-auto">
-          <div className="lg:flex md:flex xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around pt-10">
-            <div className="xl:w-1/3 sm:w-1/2 mx-auto sm:max-w-xs mb-20 xl:max-w-sm lg:w-1/2 relative">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-y-24 gap-x-8 lg:grid-cols-3 2xl:grid-cols-4">
+            <div className="w-full relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
                 <Image
                   width={400}
@@ -31,7 +30,7 @@ const Team = () => {
                 <p className="text-center text-base text-gray-600">Founder</p>
               </div>
             </div>
-            <div className="xl:w-1/3 sm:w-1/2 mx-auto sm:max-w-xs mb-20 xl:max-w-sm lg:w-1/2 relative">
+            <div className="w-full relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
                 <Image
                   width={400}
@@ -50,7 +49,7 @@ const Team = () => {
                 </p>
               </div>
             </div>
-            <div className="xl:w-1/3 sm:w-1/2 mx-auto sm:max-w-xs mb-20 xl:max-w-sm lg:w-1/2 relative">
+            <div className="w-full relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
                 <Image
                   width={400}
@@ -69,9 +68,7 @@ const Team = () => {
                 </p>
               </div>
             </div>
-          </div>
-          <div className="lg:flex md:flex xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around pt-10">
-            <div className="xl:w-1/3 sm:w-1/2 mx-auto sm:max-w-xs mb-20 xl:max-w-sm lg:w-1/2 relative">
+            <div className="w-full relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
                 <Image
                   width={400}
@@ -90,7 +87,7 @@ const Team = () => {
                 </p>
               </div>
             </div>
-            <div className="xl:w-1/3 sm:w-1/2 mx-auto sm:max-w-xs mb-20 xl:max-w-sm lg:w-1/2 relative">
+            <div className="w-full relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
                 <Image
                   width={400}
@@ -107,7 +104,7 @@ const Team = () => {
                 <p className="text-center text-base text-gray-600">Founder</p>
               </div>
             </div>
-            <div className="xl:w-1/3 sm:w-1/2 mx-auto sm:max-w-xs mb-20 xl:max-w-sm lg:w-1/2 relative">
+            <div className="w-full relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
                 <Image
                   width={400}
@@ -125,8 +122,8 @@ const Team = () => {
                   General Manager
                 </p>
               </div>
-            </div>
-            <div className="xl:w-1/3 sm:w-1/2 py-10 mx-auto sm:max-w-xs mb-20 xl:max-w-sm lg:w-1/2 relative">
+            </div>{" "}
+            <div className="w-full relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
                 <Image
                   width={400}
@@ -146,6 +143,7 @@ const Team = () => {
               </div>
             </div>
           </div>
+          <div className="lg:flex md:flex xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around pt-10"></div>
         </div>
       </div>
     </section>
