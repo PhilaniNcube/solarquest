@@ -2,7 +2,7 @@ import Image from "next/future/image";
 
 const Team = () => {
   return (
-    <section>
+    <section id="team">
       <div className="max-w-7xl flex justify-center mx-auto py-6 px-4">
         <div>
 
@@ -31,7 +31,7 @@ const Team = () => {
                 <p className="text-center text-base text-gray-600">Founder</p>
               </div>
             </div>
-            <div className="xl:w-1/3 sm:w-1/2 mx-auto sm:max-w-xs mx-4 mb-20 xl:max-w-sm lg:w-1/2 relative">
+            <div className="xl:w-1/3 sm:w-1/2 mx-auto sm:max-w-xs mb-20 xl:max-w-sm lg:w-1/2 relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
                 <Image
                   width={400}
@@ -90,7 +90,7 @@ const Team = () => {
                 </p>
               </div>
             </div>
-            <div className="xl:w-1/3 sm:w-1/2 mx-auto sm:max-w-xs mx-4 mb-20 xl:max-w-sm lg:w-1/2 relative">
+            <div className="xl:w-1/3 sm:w-1/2 mx-auto sm:max-w-xs mb-20 xl:max-w-sm lg:w-1/2 relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
                 <Image
                   width={400}
