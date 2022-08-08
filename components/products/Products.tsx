@@ -7,7 +7,7 @@ const Products = () => {
   const router = useRouter()
 
   return (
-    <section className="my-6">
+    <section className="my-10">
       <div className="mx-auto max-w-7xl px-8">
         <h2 className="text-3xl  font-medium text-red-600">
           Renewable Energy from the sun

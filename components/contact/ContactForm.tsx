@@ -1,9 +1,14 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 const ContactForm = () => {
 
+   const router = useRouter();
+
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
      e.preventDefault();
+
+     router.push("/thankyou");
    };
 
   return (
@@ -126,7 +131,7 @@ const ContactForm = () => {
 
         <button
           type="submit"
-          className="bg-red-600 py-2 px-6 mt-4 rounded-full text-white font-medium text-lg"
+          className="bg-red-600 rounded-md text-white py-2 px-6 font-bold mt-3"
         >
           Submit
         </button>

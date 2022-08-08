@@ -2,7 +2,9 @@ import { NextPage } from "next";
 import Head from "next/head";
 import Productgrid from "../components/products/ProductGrid";
 import Products from "../components/products/Products";
+import ProductsDivider from "../components/products/ProductsDivider";
 import ProductsHero from "../components/products/ProductsHero";
+import Services from "../components/products/Services";
 
 const products: NextPage = () => {
   return (
@@ -17,6 +19,8 @@ const products: NextPage = () => {
       </Head>
       <ProductsHero />
       <Products />
+      <ProductsDivider />
+      <Services />
     </>
   );
 };

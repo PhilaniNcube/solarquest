@@ -1,11 +1,16 @@
 import Image from "next/future/image";
+import { useRouter } from "next/router";
 import React from "react";
 import { RiMailAddLine, RiMapPin2Line, RiPhoneCameraLine, RiPhoneLine } from "react-icons/ri";
 
 const ContactHero = () => {
 
+  const router = useRouter()
+
  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
    e.preventDefault();
+
+   router.push('/thankyou')
  }
 
   return (
@@ -152,12 +157,11 @@ const ContactHero = () => {
                   <option value="Greater than R4500">Greater than R4500</option>
                 </select>
               </div>
-
             </div>
 
             <button
               type="submit"
-              className="bg-red-600 py-2 px-6 mt-4 rounded-full text-white font-medium text-lg"
+              className="bg-red-600 rounded-md text-white py-2 px-6 font-bold mt-3"
             >
               Submit
             </button>
