@@ -3,7 +3,7 @@
 export default function HomeSectionFour() {
   return (
     <section>
-      <div className="relative h-full px-4 bg-gradient-to-bl from-red-50 to-sky-50">
+      <div className="relative h-full px-4 py-4">
         <div className="max-w-7xl mx-auto container py-16 ">
           <div>
             <div className="flex items-left flex-col px-4">
