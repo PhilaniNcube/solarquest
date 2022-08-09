@@ -34,8 +34,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`z-50 w-full transition-colors duration-500 ${
-        scrollPosition > 100 ? "bg-zinc-800/75" : "bg-zinc-800"
+      className={`z-50 w-full transition-colors duration-[1000ms] ${
+        scrollPosition > 100 ? "backdrop-blur-lg sticky top-0 left-0 right-0" : "bg-zinc-50"
       }`}
     >
       {/* Desktop Nav Starts */}
@@ -48,12 +48,12 @@ const Navbar = () => {
           <img
             src="/images/logo-red.png"
             alt="Solarquest"
-            className="h-12 object-cover"
+            className="h-20 object-cover"
           />
         </Link>
 
         <div className="flex items-center">
-          <span className="flex space-x-3 text-white text-base">
+          <span className="flex space-x-3 text-gray-800 text-base">
             <Link href="/">
               <a className="text-md hover:text-red-500 font-bold">Home</a>
             </Link>

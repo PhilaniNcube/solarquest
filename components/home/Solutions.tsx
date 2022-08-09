@@ -11,7 +11,7 @@ const Solutions = () => {
 
   return (
     <>
-    <div className="flex w-[230px] mx-auto px-6 justify-between">
+    <div className="flex w-[230px] space-x-3 mx-auto px-6 justify-between">
       <h2 className="text-red-600 font-bold text-2xl">Home</h2>
 
       <h2 className="text-blue-700 font-bold text-2xl">Business</h2>
