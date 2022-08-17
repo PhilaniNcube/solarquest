@@ -15,7 +15,7 @@ const ContactHero = () => {
 
   return (
     <section className="relative">
-      <div className="mx-auto max-w-7xl px-4 lg:px-0 my-16 grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="mx-auto max-w-7xl px-4 lg:px-0 my-16 py-8 md:py-16 grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className="flex flex-col justify-center">
           <h1 className="text-3xl md:text-5xl font-bold text-red-600">
             Get in touch

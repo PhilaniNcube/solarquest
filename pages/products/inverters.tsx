@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/future/image";
 import { useRouter } from "next/router";
+import InvertersGrid from "../../components/products/InvertersGrid";
 
 const Inverters = () => {
 
@@ -47,6 +48,9 @@ const Inverters = () => {
         of electricity that may be sold back to Eskom allowing your solar
         installation to earn you money.
       </p>
+
+      <InvertersGrid />
+
       <button
         className="mt-2 bg-red-600 text-white font-medium text-md px-6 py-2 rounded"
         onClick={() => router.push("/products#inverters")}

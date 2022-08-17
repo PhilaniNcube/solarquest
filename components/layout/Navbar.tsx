@@ -34,8 +34,10 @@ const Navbar = () => {
 
   return (
     <header
-      className={`z-50 w-full transition-colors duration-[1000ms] ${
-        scrollPosition > 100 ? "backdrop-blur-lg sticky top-0 left-0 right-0" : "bg-zinc-50"
+      className={`z-50 w-full bg-transparent transition-colors absolute top-0 left-0 right-0 duration-[1000ms] ${
+        scrollPosition > 100
+          ? "backdrop-blur-lg sticky top-0 left-0 right-0"
+          : "bg-zinc-50"
       }`}
     >
       {/* Desktop Nav Starts */}

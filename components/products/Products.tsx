@@ -12,7 +12,7 @@ const Products = () => {
         <h2 className="text-3xl  font-medium text-red-600">
           Renewable Energy from the sun
         </h2>
-        <p className="text-gray-600 text-lg font-medium my-3 w-full md:w-4/6">
+        <p className="text-gray-600 text-lg font-medium my-3 w-full">
           What is it that you need to know about transitioning to Solar power?
           We can provide you with the information that you need to make the most
           informed decision. Harnessing the power of the sun has become more and
@@ -22,7 +22,7 @@ const Products = () => {
           energy has improved to the point where it can be cheaper that getting
           your power from the traditional power grid.
         </p>
-        <p className="text-gray-600 text-lg font-medium my-3 w-5/6 md:w-4/6">
+        <p className="text-gray-600 text-lg font-medium my-3 w-5/6">
           A solar power installation is made up of three main parts. The
           Inverter, batteries and photovoltaic panels.
         </p>

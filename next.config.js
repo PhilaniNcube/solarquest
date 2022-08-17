@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  experimental: { images: { allowFutureImage: true } }
-}
+  images: {
+    domains: ["sjvyommxrwhabvkjpwpn.supabase.co"],
+  },
+  experimental: { images: { allowFutureImage: true } },
+};
