@@ -4,33 +4,22 @@ import { FunctionComponent } from "react";
 
 const Hero : FunctionComponent = () => {
   return (
-    <header className="">
-      <div className="max-h-screen overflow-hidden relative">
-        <Image
-          width={1500}
-          height={690}
-          className="h-full w-full opacity-30 blur object-right object-cover"
-          quality={80}
-          alt="background"
-          priority={true}
-          src="/images/family-house.jpg"
-        />
-        <div className="absolute inset-0 z-30 px-4">
-          <div className="max-w-7xl mx-auto px-6 md:px-4 h-full">
-            <div className="h-full w-full flex flex-col py-3 md:py-16 justify-center">
+    <header className="px-4">
+      <div className="max-w-7xl mx-auto h-screen grid grid-cols-1 md:grid-cols-2">
+        <div className="h-full w-full flex flex-col items-start justify-center p-8">
+          <h1 className="text-3xl md:text-5xl font-semibold text-red-600">
+            How does life without Load Shedding Sound?
+          </h1>
+          <p className="text-md md:text-lg lg:text-xl text-slate-700 mt-3 font-medium">
+            With more than enough backup power, with our packages you will always have electricity even if <span className="text-blue-600 font-bold">Eskom</span> dosen't!
+          </p>
 
-              <h1 className="text-xl md:text-3xl font-serif font-bold lg:text-6xl text-red-600 tracking-wide">
-                Don't get caught <br/>in the dark!
-              </h1>
-              <p className="text-xl md:text2xl font-extrabold mt-2">Our packages ensure that <br /> will be a thing of the past.</p>
-
-              <Link href="/contact" passHref>
-                <button className="max-w-[200px] hidden md:block mt-3 border rounded-full bg-red-600 text-red-50 font-bold hover:text-white uppercase text-lg py-3 transition-all duration-300">
-                  Lets Talk
-                </button>
-              </Link>
-            </div>
-          </div>
+          <Link href="/contact">
+            <a className="px-8 py-2 rounded-full bg-red-600 mt-4 text-white text-xl">Learn more</a>
+          </Link>
+        </div>
+        <div className="w-full py-24 h-full">
+          <Image src="/images/home_roof.jpg" alt="roof" width={1159} height={1500} priority quality={100}  className="rounded-lg h-[80%] my-auto w-10/12 mx-auto object-cover shadow-lg shadow-gray-800/40" />
         </div>
       </div>
     </header>
