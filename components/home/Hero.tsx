@@ -30,7 +30,7 @@ const Hero : FunctionComponent = () => {
             height={895}
             priority
             quality={100}
-            className="rounded-lg h-[80%] my-auto w-10/12 mx-auto object-cover "
+            className="rounded-lg h-[95%] my-auto w-10/12 mx-auto object-cover "
           />
         </div>
       </div>

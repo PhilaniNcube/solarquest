@@ -20,3 +20,16 @@ export interface Inverter {
   brand: string;
   image: string;
 }
+
+
+export interface Package {
+  id: string;
+  created_at: string;
+  name: string;
+  description: string;
+  inverter: string;
+  battery: string;
+  panels: string;
+  runtime: string;
+  image: string;
+}
