@@ -76,26 +76,36 @@ const Navbar = () => {
       >
         <Link href="/">
           <AnimatePresence>
-
-          <motion.img
-            src="/images/logo-red.png"
-            alt="Solarquest"
-            className={`object-cover transition-all duration-500 ${scrollPosition > 100 ? 'h-20' : 'h-16'}`}
+            <motion.img
+              src="/images/logo-red.png"
+              alt="Solarquest"
+              className={`object-cover transition-all duration-500 ${
+                scrollPosition > 100 ? "h-20" : "h-16"
+              }`}
             />
-            </AnimatePresence>
+          </AnimatePresence>
         </Link>
 
         <div className="flex items-center">
           <span className="flex space-x-3 text-gray-800 text-base">
             {navLinks.map((link) => (
               <Link href={link.href}>
-                <a
-                  className={`text-md hover:text-red-500 font-bold ${
-                    link.active ? "text-red-600" : "text-gray-900"
-                  }`}
-                >
-                  {link.link}
-                </a>
+                <motion.div animate={{opacity: link.active ? 1 : .8}}>
+                  <a
+                    className={`text-md hover:text-red-500 font-bold ${
+                      link.active
+                        ? "text-red-600 underline-offset-8"
+                        : "text-gray-900"
+                    }`}
+                  >
+                    {link.link}
+                  </a>
+                   {link.active && (
+                  <motion.div
+                    className="underline h-1 bg-red-500"
+                    layoutId="underline"
+                  />)}
+                </motion.div>
               </Link>
             ))}
           </span>
