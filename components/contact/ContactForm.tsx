@@ -131,7 +131,7 @@ const ContactForm = () => {
 
         <button
           type="submit"
-          className="bg-red-600 rounded-full text-white py-2 px-6 font-bold mt-3"
+          className="bg-red-600 rounded-lg text-white py-2 px-6 font-bold mt-3"
         >
           Submit
         </button>

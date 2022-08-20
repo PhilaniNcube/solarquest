@@ -3,6 +3,7 @@ import { useUser } from "@supabase/auth-helpers-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/future/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { Fragment, useEffect, useState } from "react";
 import { RiCloseFill, RiMenu3Fill } from "react-icons/ri";
 
@@ -10,9 +11,38 @@ import { RiCloseFill, RiMenu3Fill } from "react-icons/ri";
 
 const Navbar = () => {
 
+  const router = useRouter();
+
+  const navLinks = [
+    {
+      link: 'Home',
+      href: '/',
+      active: router.asPath === '/'
+    },
+    {
+      link: 'About Us',
+      href: '/about',
+      active: router.asPath === '/about'
+    },
+    {
+      link: 'Products',
+      href: '/products',
+      active: router.asPath === '/products'
+    },
+    {
+      link: 'Contact',
+      href: '/contact',
+      active: router.asPath === '/contact'
+    },
+  ]
+
   const { isLoading, user, error } = useUser();
 
   const [open, setOpen] = useState(false)
+
+
+
+
 
   console.log(user)
 
@@ -34,10 +64,8 @@ const Navbar = () => {
 
   return (
     <header
-      className={`z-50 w-full bg-transparent transition-colors absolute top-0 left-0 right-0 duration-[1000ms] ${
-        scrollPosition > 100
-          ? "backdrop-blur-lg sticky top-0 left-0 right-0"
-          : ""
+      className={`z-50 w-full bg-transparent transition-colors sticky top-0 left-0 right-0 duration-[1000ms] ${
+        scrollPosition > 100 ? "backdrop-blur-lg  top-0 left-0 right-0" : ""
       }`}
     >
       {/* Desktop Nav Starts */}
@@ -47,27 +75,29 @@ const Navbar = () => {
         role="navigation"
       >
         <Link href="/">
-          <img
+          <AnimatePresence>
+
+          <motion.img
             src="/images/logo-red.png"
             alt="Solarquest"
-            className="h-20 object-cover"
-          />
+            className={`object-cover transition-all duration-500 ${scrollPosition > 100 ? 'h-20' : 'h-16'}`}
+            />
+            </AnimatePresence>
         </Link>
 
         <div className="flex items-center">
           <span className="flex space-x-3 text-gray-800 text-base">
-            <Link href="/">
-              <a className="text-md hover:text-red-500 font-bold">Home</a>
-            </Link>
-            <Link href="/about">
-              <a className="text-md hover:text-red-500 font-bold">About Us</a>
-            </Link>
-            <Link href="/products">
-              <a className="text-md hover:text-red-500 font-bold">Products</a>
-            </Link>
-            <Link href="/contact">
-              <a className="text-md hover:text-red-500 font-bold">Contact</a>
-            </Link>
+            {navLinks.map((link) => (
+              <Link href={link.href}>
+                <a
+                  className={`text-md hover:text-red-500 font-bold ${
+                    link.active ? "text-red-600" : "text-gray-900"
+                  }`}
+                >
+                  {link.link}
+                </a>
+              </Link>
+            ))}
           </span>
           {!user ? (
             <Fragment>
@@ -128,38 +158,17 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
               />
               <div className="flex flex-col px-6 space-y-4 justify-between items-center py-8 w-full">
-                <Link href="/">
-                  <a
-                    className="text-white font-medium text-xl"
-                    onClick={() => setOpen(false)}
-                  >
-                    Home
-                  </a>
-                </Link>
-                <Link href="/products">
-                  <a
-                    className="text-white font-medium text-xl"
-                    onClick={() => setOpen(false)}
-                  >
-                    Products
-                  </a>
-                </Link>
-                <Link href="/about">
-                  <a
-                    className="text-white font-medium text-xl"
-                    onClick={() => setOpen(false)}
-                  >
-                    About
-                  </a>
-                </Link>
-                <Link href="/contact">
-                  <a
-                    className="text-white font-medium text-xl"
-                    onClick={() => setOpen(false)}
-                  >
-                    Contact
-                  </a>
-                </Link>
+                {navLinks.map((link) => (
+                  <Link href={link.href}>
+                    <a
+                      className="text-white font-medium text-xl"
+                      onClick={() => setOpen(false)}
+                    >
+                      {link.link}
+                    </a>
+                  </Link>
+                ))}
+
                 <div className="w-full items-center py-4 rounded flex flex-col space-y-4">
                   {user ? (
                     <>

@@ -12,13 +12,13 @@ const Products = ({packages}:{packages: Package[]}) => {
   return (
     <section className="my-10">
       <div className="mx-auto max-w-7xl">
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+        <div className="mt-12 mb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
           {packages.map((product) => (
             <motion.div
               key={product.id}
               id={product.id}
               layoutId={product.id}
-              className="w-full cursor-pointer py-2 rounded-lg"
+              className="w-full py-2 rounded-lg"
             >
               <Image
                 src={product.image}
