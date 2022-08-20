@@ -59,12 +59,10 @@ const solarShow = () => {
           animate={{
             opacity: 1,
             y: 0,
-            transition: {
-              staggerChildren: 0.35,
+          }}
+          transition={{
+               duration: 2,
 
-              ease: [0.6, 0.01, -0.05, 0.95],
-              duration: 1.6,
-            },
           }}
           className="max-w-7xl px-4 mt-16 mx-auto h-screen py-10"
         >
