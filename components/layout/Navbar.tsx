@@ -80,7 +80,7 @@ const Navbar = () => {
               src="/images/logo-red.png"
               alt="Solarquest"
               className={`object-cover transition-all duration-500 ${
-                scrollPosition > 100 ? "h-20" : "h-16"
+                scrollPosition > 100 ? "h-20 md:h-32" : "h-24"
               }`}
             />
           </AnimatePresence>

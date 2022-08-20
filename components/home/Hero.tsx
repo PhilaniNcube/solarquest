@@ -14,11 +14,11 @@ const Hero : FunctionComponent = () => {
             transition={{ duration: 0.55 }}
             className="text-3xl md:text-5xl font-semibold text-red-600"
           >
-            How does life without Load Shedding Sound?
+            LIVE LIFE WITHOUT LOAD SHEDDING.
           </motion.h1>
           <p className="text-md md:text-lg lg:text-xl leading-7 text-slate-700 mt-3 font-medium">
-            With more than enough backup power, with our packages you will
-            always have electricity even if{" "}
+            SOLAR AND BACK POWER SOLUTIONS THAT KEEP YOU POWERED AND SAVE YOU
+            MONEY!
             <span className="text-blue-600 font-bold">Eskom</span> dosen't!
           </p>
 
