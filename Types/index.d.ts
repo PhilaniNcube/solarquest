@@ -32,4 +32,5 @@ export interface Package {
   panels: string;
   runtime: string;
   image: string;
+  type: 'buisness' | 'residential';
 }

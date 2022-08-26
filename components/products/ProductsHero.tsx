@@ -25,22 +25,26 @@ function index() {
               alt="products"
               className="lg:hidden md:hidden block h-[700px]"
             />
-            <div className="absolute inset-0 bg-blend-huedd bg-slate-200/80 lg:px-24 md:px-12 px-2 xl:py-28 lg:py-14 md:py-10 py-10 lg:h-full lg:max-w-[715px] w-full">
+            <div className="absolute inset-0 bg-slate-200/90 lg:px-24 md:px-12 px-2 xl:py-28 lg:py-14 md:py-10 py-10 lg:h-full lg:max-w-[715px] w-full">
               <p className="lg:text-6xl md:text-5xl text-4xl font-bold text-red-600 lg:max-w-[515px] w-full">
-                Let us solve your electricty problems
+                Save Money by Going Solar Today!
               </p>
-              <p className="text-base md:text-lg font-medium text-gray-600 lg:w-[515px] w-full pt-8">
-                We have packages that will set you free from Load Shedding.
-                Whether for your home or business you will never be left without
-                power or in the dark.
+              <p className="text-base md:text-lg font-medium text-gray-600 leading-6 lg:w-[515px] w-full pt-8">
+                Our Grid Connected Solar Solutions can help you reduce your
+                monthly Eskom bill{" "}
+                <span className="font-bold md:text-xl ">70%-90%</span> and are
+                optimised to give you the freedom to become totally Energy
+                Independent!
               </p>
-              <div onClick={() => router.push('/contact')} className="flex items-center rounded-lg justify-between bg-red-600 px-4 py-3 lg:w-[211px] w-full mt-8 hover:bg-gray-600 cursor-pointer duration-200">
+              <div
+                onClick={() => router.push("/contact")}
+                className="flex items-center rounded-lg justify-between bg-red-600 px-4 py-3 max-w-sm mt-8 hover:bg-gray-600 cursor-pointer duration-200"
+              >
                 <button className="text-white font-medium">
-                  Send us a message
+                  Arrange a Free Site Assessment Today!*
                 </button>
                 <svg
-                  width={16}
-                  height={16}
+                  className="h-6 w-6"
                   viewBox="0 0 16 16"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -171,6 +175,12 @@ function index() {
                     />
                   </svg>
                 </div>
+              </div>
+              <div className="flex mt-2 gap-3">
+                <small className="text-sm text-red-900">
+                  *Free site assessments available within a 50KM radius of CDB
+                  in Cape Town & Johannesburg
+                </small>
               </div>
             </div>
           </div>

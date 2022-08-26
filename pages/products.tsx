@@ -6,17 +6,27 @@ import Products from "../components/products/Products";
 import ProductsDivider from "../components/products/ProductsDivider";
 import ProductsHero from "../components/products/ProductsHero";
 import Services from "../components/products/Services";
-import getPackages from "../fetchers/packages";
+import getPackages, { getBusiness, getResidential } from "../fetchers/packages";
 import { Package } from "../Types";
 
-const ProductsPage = ({packages}: {packages: Package[]}) => {
-
-   const {data, isLoading, isSuccess, error} = useQuery('packages', getPackages, {
-    initialData: packages,
+const ProductsPage = ({
+  businessPackages,
+  residentialPackages,
+}: {
+  businessPackages: Package[];
+  residentialPackages: Package[];
+}) => {
+  const businessPackageQuery = useQuery("businessPackages", getBusiness, {
+    initialData: businessPackages,
     refetchOnMount: false,
     refetchOnWindowFocus: false,
-   })
+  });
 
+  const residentialPackageQuery = useQuery("residentialPackages", getResidential, {
+    initialData: residentialPackages,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+  });
 
   return (
     <>
@@ -29,7 +39,13 @@ const ProductsPage = ({packages}: {packages: Package[]}) => {
         />
       </Head>
       <ProductsHero />
-      {isSuccess && <Products packages={data} />}
+      {residentialPackageQuery.isSuccess && businessPackageQuery.isSuccess && (
+        <Products
+          residentialPackages={residentialPackageQuery.data}
+          businessPackages={businessPackageQuery.data}
+        />
+      )}
+
       <ProductsDivider />
       <Services />
     </>
@@ -40,11 +56,13 @@ export default ProductsPage;
 
 export async function getStaticProps() {
 
-  const packages = await getPackages();
+  const residentialPackages = await getResidential();
+  const businessPackages = await getBusiness();
 
   return {
     props: {
-      packages
-    }
-  }
+      residentialPackages,
+      businessPackages,
+    },
+  };
 }
