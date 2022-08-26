@@ -5,7 +5,7 @@ const HomeSectionThree = () => {
   return (
     <section className="">
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="p-4 md:p-16 flex flex-col max-h-[60vh] items-end  w-full h-full">
+        <div className="p-4 md:p-16 flex flex-col md:max-h-[60vh] items-end mb-4 w-full h-full">
           <h2 className="text-red-600 text-3xl font-bold md:text-3xl text-right">
             Move over to renewable <br />
             energy to power your home
