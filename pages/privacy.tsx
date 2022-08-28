@@ -6,6 +6,18 @@ const Privacy = () => {
     <Fragment>
       <Head>
         <title>Privacy Policy | Solarquest</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+        />
+        <meta
+          name="description"
+          content="Solarquest protects our customers privacy. View our privacy policy to see how we handle our customers personal details."
+        />
+        <meta
+          name="keywords"
+          content="solar pwer solutions, solar services, solar panels, solar system design, lithium batteries, solar inverters, lithium ion battery, solar power, solar panel installation, solar inverter price, off grid, solar panel inverter, solar power panels, solar energy solutions, hybrid inverter, voltage switcher, ac combiner box, dc combiner box, solar installer, pv cable, solar cable, solar support, solar repairs, solar training, balance of systems "
+        />
       </Head>
       <main className="py-6 mb-8">
         <div className="max-w-7xl mx-auto px-4 text-gray-600 text-sm md:text-md">

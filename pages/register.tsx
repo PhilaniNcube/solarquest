@@ -57,6 +57,14 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
         />
+        <meta
+          name="description"
+          content="Solarquest protects our customers privacy. View our privacy policy to see how we handle our customers personal details."
+        />
+        <meta
+          name="keywords"
+          content="solar pwer solutions, solar services, solar panels, solar system design, lithium batteries, solar inverters, lithium ion battery, solar power, solar panel installation, solar inverter price, off grid, solar panel inverter, solar power panels, solar energy solutions, hybrid inverter, voltage switcher, ac combiner box, dc combiner box, solar installer, pv cable, solar cable, solar support, solar repairs, solar training, balance of systems "
+        />
       </Head>
       <section className="bg-white min-h-screen py-24">
         <div className="mx-auto flex justify-center h-full flex-col lg:flex-row">
@@ -168,9 +176,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             </div>
           </form>
           <div className="w-full lg:w-1/2 py-40 sm:py-48 sm:px-12 flex flex-col justify-center relative bg-no-repeat bg-center bg-cover h-full">
-            <div className="absolute top-0 right-0 pt-3 pr-3">
-
-            </div>
+            <div className="absolute top-0 right-0 pt-3 pr-3"></div>
             <div className="flex relative z-30 flex-col justify-center pl-4 md:pr-12 xl:pr-12 md:pl-24">
               <h3 className="text-4xl font-extrabold leading-tight text-red-600">
                 Solarquest <br />
@@ -182,9 +188,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                 best information and set you up with the right solution.
               </p>
             </div>
-            <div className="pb-3 pl-3 text-white">
-
-            </div>
+            <div className="pb-3 pl-3 text-white"></div>
           </div>
         </div>
       </section>
