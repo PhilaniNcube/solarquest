@@ -19,7 +19,7 @@ export default getPackages
 export let getResidential = async () => {
   let { data: packages, error } = await supabaseClient
   .from('packages')
-  .select('*').eq('type', 'residential')
+  .select('*').eq('type', 'residential').order('order', {ascending: true})
 
   if(error) throw error.message
 
@@ -29,7 +29,7 @@ export let getResidential = async () => {
 export let getBusiness = async () => {
   let { data: packages, error } = await supabaseClient
   .from('packages')
-  .select('*').eq('type', 'business')
+  .select('*').eq('type', 'business').order('name')
 
   if(error) throw error.message
 
