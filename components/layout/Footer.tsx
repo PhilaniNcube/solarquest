@@ -73,13 +73,13 @@ const Footer = () => (
         </div>
         <div className="lg:w-1/4 flex lg:justify-end items-end mt-12 lg:mt-0">
           <div className="bg-white p-1 rounded-full mr-2.5">
-            <RiFacebookFill className="text-red-600 bg-white h-10 w-10 rounded-full" />
+            <RiFacebookFill className="text-red-600 h-6 w-6 bg-white md:h-10 md:w-10 rounded-full" />
           </div>
           <div className="bg-white p-1 rounded-full mr-2.5">
-            <RiTwitterFill className="text-red-600 bg-white h-10 w-10 rounded-full" />
+            <RiTwitterFill className="text-red-600 h-6 w-6 bg-white md:h-10 md:w-10 rounded-full" />
           </div>
           <div className="bg-white p-1 rounded-full mr-2.5">
-            <RiLinkedinFill className="text-red-600 bg-white h-10 w-10 rounded-full" />
+            <RiLinkedinFill className="text-red-600 h-6 w-6 bg-white md:h-10 md:w-10 rounded-full" />
           </div>
         </div>
       </div>

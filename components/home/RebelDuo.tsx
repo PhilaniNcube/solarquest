@@ -14,14 +14,14 @@ function RebelDuo() {
                   width={1200}
                   height={1200}
                   quality={100}
-                  src="/images/rebel_duo.png"
+                  src="https://sjvyommxrwhabvkjpwpn.supabase.co/storage/v1/object/public/products/ultimate_duo.png"
                   alt="rebel Max"
                   className="h-full object-cover block"
                 />
               </div>
               <div>
                 <p className="lg:text-4xl md:text-3xl text-3xl text-red-600 font-semibold md:text-left">
-                  Rebel Duo
+                  Ultimate Duo
                 </p>
 
                 <div className="flex items-center space-x-4 mt-3">
@@ -61,7 +61,7 @@ function RebelDuo() {
                     </g>
                   </svg>
                   <p className="text-lg text-gray-600 font-bold">
-                    8 - 10 Hours of backup power
+                    6 - 8 Hours of backup power
                   </p>
                 </div>
                 <p className="text-base text-gray-600 max-w-[624px] w-full mt-6 md:text-left">
@@ -69,11 +69,12 @@ function RebelDuo() {
                   <span className="text-black font-bold">Load shedding</span>{" "}
                   woes. Free yourself from the unpredicatble Eskom electricity
                   supply. The{" "}
-                  <span className="font-bold text-red-600">Rebel Duo</span> is a
+                  <span className="font-bold text-red-600">Ultimate Duo</span> is a
                   great solution for you.
                 </p>
                 <p className="text-base text-gray-600 max-w-[624px] w-full mt-2 md:text-left">
-                 Keep your devices powered up. No need to stop your favourite streaming services because you will have enough electricity.
+                  Keep your devices powered up. No need to stop your favourite
+                  streaming services because you will have enough electricity.
                 </p>
                 <Link href="/contact" passHref>
                   <button className="bg-red-600 text-base font-medium rounded-full lg:max-w-[205px] w-full px-3 py-2 text-white mt-11 hover:bg-gray-700 transition duration-300 ease-in-out lg:block md:hidden blocl">

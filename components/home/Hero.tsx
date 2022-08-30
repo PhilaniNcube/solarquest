@@ -16,10 +16,10 @@ const Hero : FunctionComponent = () => {
           >
             LIVE LIFE WITHOUT LOAD SHEDDING.
           </motion.h1>
-          <p className="text-md md:text-lg lg:text-xl leading-7 text-slate-700 mt-3 font-medium">
+          <p className="text-md md:text-lg lg:text-xl text-slate-700 mt-3 font-bold">
             SOLAR AND BACK POWER SOLUTIONS THAT KEEP YOU POWERED AND SAVE YOU
             MONEY!
-            <span className="text-blue-600 font-bold">Eskom</span> dosen't!
+
           </p>
 
           <Link href="/contact">
@@ -35,7 +35,7 @@ const Hero : FunctionComponent = () => {
           className="w-full isolated py-24 h-full relative before:content-[''] before:absolute before:bottom-20 before:right-10 before:h-56 before:w-56 before:-z-10 before:rotate-45 before:bg-slate-300/30 before:rounded-lg before:shadow-2xl after:content-[''] after:absolute after:top-10 after:left-10 after:h-56 after:w-56 after:-z-10 after:rotate-45 after:bg-red-300/30 after:rounded-full after:shadow-xl"
         >
           <Image
-            src="/images/rebel_duo_plus.png"
+            src="https://sjvyommxrwhabvkjpwpn.supabase.co/storage/v1/object/public/products/ultimate_duo_plus.png"
             alt="rebel duo plus"
             width={1101}
             height={895}
