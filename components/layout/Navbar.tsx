@@ -113,7 +113,7 @@ const Navbar = () => {
           {!user ? (
             <Fragment>
               <Link href="/contact">
-                <button onClick={() => analytics.track('Goal -1')} className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
+                <button onClick={() => analytics.track('Goal - 1')} className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
                   Get in touch
                 </button>
               </Link>
@@ -196,7 +196,11 @@ const Navbar = () => {
                     <>
                       <Link href="/contact">
                         <button
-                          onClick={() => setOpen(false)}
+                          onClick={() => {
+                           analytics.track("Goal - 1");
+                            setOpen(false)
+                          }
+                        }
                           className="ml-4 bg-white rounded-full px-6 font-bold py-2 text-red-600"
                         >
                           Get in touch
