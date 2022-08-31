@@ -2,16 +2,42 @@ import Image from "next/future/image";
 import { useRouter } from "next/router";
 import React from "react";
 import { RiMailAddLine, RiMapPin2Line, RiPhoneCameraLine, RiPhoneLine } from "react-icons/ri";
+import analytics from "../../utils/analytics";
 
 const ContactHero = () => {
 
   const router = useRouter()
 
- const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-   e.preventDefault();
+   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+     e.preventDefault();
 
-   router.push('/thankyou')
- }
+     analytics.track("generate_lead");
+
+     const { last_name, first_name, email, telephone, address, electricity } =
+       Object.fromEntries(new FormData(e.currentTarget));
+
+     let request = await fetch(`/api/contact`, {
+       method: "POST",
+       headers: {
+         "Content-Type": "application/json",
+         Authorization: `Bearer ${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`,
+       },
+       body: JSON.stringify({
+         first_name: first_name,
+         last_name: last_name,
+         email: email,
+         telephone: telephone,
+         address: address,
+         electricity: electricity,
+       }),
+     });
+
+     let response = await request.json();
+
+     console.log(response);
+
+     router.push("/thankyou");
+   };
 
   return (
     <section className="relative">

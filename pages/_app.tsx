@@ -2,16 +2,20 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
 import { UserProvider } from '@supabase/auth-helpers-react'
 import { supabaseClient } from '@supabase/auth-helpers-nextjs'
-import Cookie from '../components/Modals/Cookies'
+import analytics from '../utils/analytics'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = React.useState(() => new QueryClient({}))
 
+
+   useEffect(() => {
+     analytics.page();
+   }, []);
 
 
   return (

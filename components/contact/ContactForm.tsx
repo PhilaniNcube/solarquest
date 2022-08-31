@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
+import analytics from "../../utils/analytics";
 
 const ContactForm = () => {
 
@@ -7,6 +8,35 @@ const ContactForm = () => {
 
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
      e.preventDefault();
+
+     analytics.track('generate_lead')
+
+       const {  last_name, first_name, email, telephone, address, electricity } = Object.fromEntries(
+         new FormData(e.currentTarget)
+       );
+
+     let request = await fetch(
+       `/api/contact`,
+       {
+         method: "POST",
+         headers: {
+           "Content-Type": "application/json",
+           Authorization: `Bearer ${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`,
+         },
+         body: JSON.stringify({
+           first_name: first_name,
+           last_name: last_name,
+           email: email,
+          telephone: telephone,
+          address: address,
+          electricity: electricity,
+         }),
+       }
+     );
+
+     let response = await request.json()
+
+     console.log(response)
 
      router.push("/thankyou");
    };
