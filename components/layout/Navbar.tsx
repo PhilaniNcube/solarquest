@@ -71,9 +71,7 @@ const Navbar = () => {
     >
       {/* Desktop Nav Starts */}
       <nav
-        className="max-w-7xl mx-auto px-4 py-3 hidden md:flex items-center justify-between bg-transparent text-white "
-        aria-roledescription="navigation"
-        role="navigation"
+        className="max-w-7xl mx-auto px-4 py-3 hidden md:flex items-center justify-between bg-transparent text-white"
       >
         <Link href="/">
           <AnimatePresence>
