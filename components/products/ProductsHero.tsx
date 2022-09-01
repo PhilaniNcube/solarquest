@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
+import analytics from "../../utils/analytics";
 
 function index() {
 
@@ -38,9 +39,12 @@ function index() {
               </p>
               <div
                 onClick={() => router.push("/contact")}
-                className="flex items-center rounded-lg justify-between bg-red-600 px-4 py-3 max-w-sm mt-8 hover:bg-gray-600 cursor-pointer duration-200"
+                className="flex items-center rounded-lg justify-between bg-red-600 px-4 py-3 w-fit mt-8 hover:bg-gray-600 cursor-pointer duration-200"
               >
-                <button className="text-white font-medium">
+                <button
+                  onClick={() => analytics.track("Goal - 1")}
+                  className="text-white text-sm md:text-md pr-4 font-medium"
+                >
                   Arrange a Free Site Assessment Today!*
                 </button>
                 <svg

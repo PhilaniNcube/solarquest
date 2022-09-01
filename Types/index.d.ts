@@ -33,4 +33,7 @@ export interface Package {
   runtime: string;
   image: string;
   type: 'buisness' | 'residential';
+  solution: string;
+  design: string;
+  level: string;
 }
