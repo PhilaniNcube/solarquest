@@ -14,7 +14,7 @@ const Hero : FunctionComponent = () => {
             transition={{ duration: 0.55 }}
             className="text-3xl md:text-5xl font-semibold text-red-600"
           >
-            LIVE LIFE WITHOUT LOAD SHEDDING.
+            LIVE LIFE WITHOUT LOAD SHEDDING
           </motion.h1>
           <p className="text-md md:text-lg lg:text-xl text-slate-700 mt-3 font-bold">
             SOLAR AND BACK POWER SOLUTIONS THAT KEEP YOU POWERED AND SAVE YOU
