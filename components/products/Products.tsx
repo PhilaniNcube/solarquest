@@ -71,7 +71,7 @@ const Products = ({
                     {product.name}
                   </p>
                   <p className="text-gray-600 font-medium text-sm  mt-1">
-                    {product.description}
+                    {product.solution}
                   </p>
 
                 </div>
