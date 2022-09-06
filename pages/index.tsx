@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-        />
+        /><meta name="facebook-domain-verification" content="b3vvytymdydkjj0u7gcyvjtxaherw6" />
         <meta
           name="description"
           content="Solarquest provides customized solar solutions to meet your home and business requirements."
