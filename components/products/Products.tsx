@@ -41,6 +41,14 @@ const Products = ({
                   <p className="text-gray-600 font-medium text-sm mt-1">
                     {product.solution}
                   </p>
+                  
+                     <p className="text-gray-600 font-medium text-sm  mt-1">
+                    {product.design}
+                  </p>
+                  
+                    <p className="text-gray-600 font-medium text-sm  mt-1">
+                    {product.level}
+                  </p>
 
                 </div>
               </div>
@@ -71,7 +79,15 @@ const Products = ({
                     {product.name}
                   </p>
                   <p className="text-gray-600 font-medium text-sm  mt-1">
-                    {product.description}
+                    {product.solution}
+                  </p>
+                  
+                    <p className="text-gray-600 font-medium text-sm  mt-1">
+                    {product.design}
+                  </p>
+                  
+                    <p className="text-gray-600 font-medium text-sm  mt-1">
+                    {product.level}
                   </p>
 
                 </div>
