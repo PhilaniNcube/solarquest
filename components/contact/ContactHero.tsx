@@ -1,7 +1,7 @@
 import Image from "next/future/image";
 import { useRouter } from "next/router";
 import React from "react";
-import { RiMailAddLine, RiMapPin2Line, RiPhoneCameraLine, RiPhoneLine } from "react-icons/ri";
+import { RiCellphoneLine, RiMailAddLine, RiMapPin2Line, RiPhoneCameraLine, RiPhoneLine } from "react-icons/ri";
 import analytics from "../../utils/analytics";
 
 const ContactHero = () => {
@@ -57,6 +57,7 @@ const ContactHero = () => {
             9 Kramer Road, Kramerville, <br />
             Sandton, Johannesburg
           </article>
+
           <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
             <span>
               <RiPhoneLine className="mr-3 h-6 w-6" />
@@ -65,7 +66,21 @@ const ContactHero = () => {
           </article>
           <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
             <span>
+              <RiMapPin2Line className="mr-3 h-6 w-6" />
+            </span>{" "}
+            Unit 3 Northgate Business Park, Brooklyn, <br />
+            Cape Town, 7405
+          </article>
+
+          <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
+            <span>
               <RiPhoneLine className="mr-3 h-6 w-6" />
+            </span>{" "}
+            +27 21 023 2475
+          </article>
+          <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
+            <span>
+              <RiCellphoneLine className="mr-3 h-6 w-6" />
             </span>{" "}
             +27 81 838 1088
           </article>
