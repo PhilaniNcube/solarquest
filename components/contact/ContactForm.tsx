@@ -9,7 +9,7 @@ const ContactForm = () => {
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
      e.preventDefault();
 
-     analytics.track('generate_lead')
+
 
        const {  last_name, first_name, email, telephone, address, electricity } = Object.fromEntries(
          new FormData(e.currentTarget)
@@ -38,7 +38,11 @@ const ContactForm = () => {
 
      console.log(response)
 
-    //  router.push("/thankyou");
+     analytics.track("generate_lead", {
+      id: response.data?.id
+     });
+
+     router.push("/thankyou");
    };
 
   return (
