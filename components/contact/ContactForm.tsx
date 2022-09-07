@@ -38,7 +38,7 @@ const ContactForm = () => {
 
      console.log(response)
 
-     router.push("/thankyou");
+    //  router.push("/thankyou");
    };
 
   return (
