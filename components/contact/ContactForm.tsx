@@ -144,7 +144,7 @@ const ContactForm = () => {
           <div className="flex flex-col">
             <label
               className="placeholder:text-slate-700 text-sm font-medium "
-              htmlFor="electricty"
+              htmlFor="electricity"
             >
               What is your current electricty bill?
             </label>
@@ -152,9 +152,10 @@ const ContactForm = () => {
               className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
               placeholder="Phone Number"
               required
-              id="electricty"
-              name="electricty"
+              id="electricity"
+              name="electricity"
             >
+              <option  value="">Select a value</option>
               <option value="Less than R1500">Less than R1500</option>
               <option value="R1500-R2500">R1500-R2500</option>
               <option value="R2501-R4500">R2501-R4500</option>

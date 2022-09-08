@@ -40,11 +40,36 @@ export default async function handler(
     email: [email],
     phone: [telephone],
     marketing_status: 'subscribed',
+    custom_fields: {
+    address: address,
+    electricity: electricity,
+    }
+
   })
  })
 
  let response = await request.json()
 
+ console.log(response)
 
-  res.status(200).json({message: response, data: data})
+ const personId = response.data.id
+
+  const leadRequest = await fetch(`https://solarquest2.pipedrive.com/api/v1/leads?api_token=${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`,
+  },
+  body: JSON.stringify({
+    title: `${first_name} ${last_name}`,
+    person_id: personId,
+
+
+  })
+ })
+
+
+ let leadResponse = await leadRequest.json()
+
+  res.status(200).json({message: response, data: data, lead: leadResponse})
 }
