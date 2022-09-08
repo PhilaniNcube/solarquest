@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { supabaseClient } from '@supabase/auth-helpers-nextjs';
-import axios from 'axios'
+
 import type { NextApiRequest, NextApiResponse } from 'next'
 const pipedrive = require('pipedrive');
 
@@ -54,7 +54,7 @@ export default async function handler(
 
  const personId = response.data.id
 
-  const leadRequest = await fetch(`https://solarquest2.pipedrive.com/api/v1/leads?api_token=${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`, {
+  const leadRequest = await fetch(`https://solarquest2.pipedrive.com/api/v1/deals?api_token=${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`, {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ export default async function handler(
   body: JSON.stringify({
     title: `${first_name} ${last_name}`,
     person_id: personId,
-
+    currency : 'ZAR'
 
   })
  })
