@@ -79,14 +79,20 @@ const Footer = () => (
         </div>
         <div className="lg:w-1/4 flex lg:justify-end items-end mt-12 lg:mt-0">
           <div className="bg-white p-1 rounded-full mr-2.5">
+            <Link href="https://www.facebook.com/SolarquestSA">
             <RiFacebookFill className="text-red-600 h-6 w-6 bg-white md:h-10 md:w-10 rounded-full" />
-          </div>
+            </Link>
+              </div>
           <div className="bg-white p-1 rounded-full mr-2.5">
+            <Link href="https://twitter.com/solarquestsa">
             <RiTwitterFill className="text-red-600 h-6 w-6 bg-white md:h-10 md:w-10 rounded-full" />
-          </div>
+            </Link>
+              </div>
           <div className="bg-white p-1 rounded-full mr-2.5">
+            <Link href="https://www.linkedin.com/company/solarquestco/?originalSubdomain=za">
             <RiLinkedinFill className="text-red-600 h-6 w-6 bg-white md:h-10 md:w-10 rounded-full" />
-          </div>
+            </Link>
+              </div>
         </div>
       </div>
     </div>
