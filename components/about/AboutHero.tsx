@@ -12,7 +12,6 @@ const AboutHero = () => {
             </h2>
           </div>
         </div>
-
       </div>
 
       <div className="lg:mt-14 sm:mt-7 mt-14">
@@ -23,10 +22,10 @@ const AboutHero = () => {
             </h1>
             <p className="pr-6 font-normal text-lg leading-6 text-gray-600 mt-6 w-full xl:w-9/12">
               We entered the industry in 1982 while solar technology was still
-              in its infancy. More than 55,000 installations and 39 years later
-              we still carry that innovative spark; harnessing clean and
-              affordable technology to improve access to renewable energy across
-              the globe.
+              in its infancy. More than 55,000 installations across 17 countries
+              and 40 years later we still carry that innovative spark;
+              harnessing clean and affordable technology to improve access to
+              renewable energy across the globe.
             </p>
             <p className="pr-6 font-normal text-lg leading-6 text-gray-600 w-full xl:w-9/12 mt-6">
               From household to national projects, we are solution based and

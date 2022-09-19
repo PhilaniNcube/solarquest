@@ -25,9 +25,8 @@ const Team = () => {
               </div>
               <div className="py-5 bg-white flex flex-col justify-center w-11/12 mx-auto absolute rounded shadow -mt-12 right-0 left-0">
                 <p className="text-xl text-center text-red-600 font-normal mb-1">
-                  Jangez Gangat
+                  Jangez Gangat, Founder
                 </p>
-                <p className="text-center text-base text-gray-600">Founder</p>
               </div>
             </div>
             <div className="w-full relative">
@@ -42,14 +41,10 @@ const Team = () => {
               </div>
               <div className="py-5 bg-white flex flex-col justify-center w-11/12 mx-auto absolute rounded shadow -mt-12 right-0 left-0">
                 <p className="text-xl text-center text-red-600 font-normal mb-1">
-                  Nyasha Bamhare
-                </p>
-                <p className="text-center text-base text-gray-600">
-                  Chief Executive Officer
+                  Nyasha Bamhare, CEO
                 </p>
               </div>
             </div>
-
 
             <div className="w-full relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
@@ -63,13 +58,11 @@ const Team = () => {
               </div>
               <div className="py-5 bg-white flex flex-col justify-center w-11/12 mx-auto absolute rounded shadow -mt-12 right-0 left-0">
                 <p className="text-xl text-center text-red-600 font-normal mb-1">
-                  Maria Gangat
+                  Maria Gangat, Founder
                 </p>
-                <p className="text-center text-base text-gray-600">Founder</p>
+
               </div>
             </div>
-
-
           </div>
           <div className="lg:flex md:flex xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around pt-10"></div>
         </div>
