@@ -12,7 +12,7 @@ const Team = () => {
       </div>
       <div className="w-full px-10">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-24 gap-x-8 lg:grid-cols-3 2xl:grid-cols-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-24 gap-x-8 lg:grid-cols-3 ">
             <div className="w-full relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
                 <Image
@@ -49,44 +49,8 @@ const Team = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full relative">
-              <div className="bg-top bg-cover bg-no-repeat h-64">
-                <Image
-                  width={400}
-                  height={400}
-                  src="/images/elaine.jpg"
-                  alt="team member"
-                  className="h-[330px] w-full overflow-hidden object-cover rounded shadow aspect-square"
-                />
-              </div>
-              <div className="py-5 bg-white flex flex-col justify-center w-11/12 mx-auto absolute rounded shadow -mt-12 right-0 left-0">
-                <p className="text-xl text-center text-red-600 font-normal mb-1">
-                  Elain Peters
-                </p>
-                <p className="text-center text-base text-gray-600">
-                  Chief Financial Officer
-                </p>
-              </div>
-            </div>
-            <div className="w-full relative">
-              <div className="bg-top bg-cover bg-no-repeat h-64">
-                <Image
-                  width={400}
-                  height={400}
-                  src="/images/brian.jpg"
-                  alt="team member"
-                  className="h-[330px] w-full overflow-hidden object-cover rounded shadow aspect-square"
-                />
-              </div>
-              <div className="py-5 bg-white flex flex-col justify-center w-11/12 mx-auto absolute rounded shadow -mt-12 right-0 left-0">
-                <p className="text-xl text-center text-red-600 font-normal mb-1">
-                  Brian Makundi
-                </p>
-                <p className="text-center text-base text-gray-600">
-                  Chief Operating Officer
-                </p>
-              </div>
-            </div>
+
+
             <div className="w-full relative">
               <div className="bg-top bg-cover bg-no-repeat h-64">
                 <Image
@@ -104,44 +68,8 @@ const Team = () => {
                 <p className="text-center text-base text-gray-600">Founder</p>
               </div>
             </div>
-            <div className="w-full relative">
-              <div className="bg-top bg-cover bg-no-repeat h-64">
-                <Image
-                  width={400}
-                  height={400}
-                  src="/images/mutsa.jpg"
-                  alt="team member"
-                  className="h-[330px] w-full overflow-hidden object-cover rounded shadow aspect-square"
-                />
-              </div>
-              <div className="py-5 bg-white flex flex-col justify-center w-11/12 mx-auto absolute rounded shadow -mt-12 right-0 left-0">
-                <p className="text-xl text-center text-red-600 font-normal mb-1">
-                  Mutsa Madzima
-                </p>
-                <p className="text-center text-base text-gray-600">
-                  General Manager
-                </p>
-              </div>
-            </div>{" "}
-            <div className="w-full relative">
-              <div className="bg-top bg-cover bg-no-repeat h-64">
-                <Image
-                  width={400}
-                  height={400}
-                  src="/images/taylor.jpg"
-                  alt="team member"
-                  className="h-[330px] w-full overflow-hidden object-cover rounded shadow aspect-square"
-                />
-              </div>
-              <div className="py-5 bg-white flex flex-col justify-center w-11/12 mx-auto absolute rounded shadow -mt-12 right-0 left-0">
-                <p className="text-xl text-center text-red-600 font-normal mb-1">
-                  Taylor Bradley
-                </p>
-                <p className="text-center text-base text-gray-600">
-                  Marketing Manager
-                </p>
-              </div>
-            </div>
+
+
           </div>
           <div className="lg:flex md:flex xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around pt-10"></div>
         </div>
