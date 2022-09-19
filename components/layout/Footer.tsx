@@ -8,7 +8,13 @@ const Footer = () => (
         <div className="lg:w-1/4 pb-12 lg:pb-0">
           <img className="mb-8" src="/images/logo-lg.png" alt="logo" />
           <p className="text-white text-xl">
-            9 Kramer Road, Kramerville, Sandton
+            9 Kramer Road, Kramerville
+          </p>
+          <p className="text-white text-xl">
+            Sandton, Johannesburg, 2090
+          </p>
+          <p className="text-white text-xl">
+            South Africa
           </p>
         </div>
         <div className="lg:w-1/2 sm:flex justify-between lg:justify-end">

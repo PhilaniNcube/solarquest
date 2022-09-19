@@ -63,7 +63,10 @@ export default async function handler(
   body: JSON.stringify({
     title: `${first_name} ${last_name}`,
     person_id: personId,
-    currency : 'ZAR'
+    currency : 'ZAR',
+     '10765cf01debaaf7f6a391d8ae6baefea4df2ecc': address,
+    '49ffed0939c4895d3f5f61c32254fc709c033b59': electricity,
+
 
   })
  })
