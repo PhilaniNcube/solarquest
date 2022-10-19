@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="max-w-7xl relative z-10 mx-auto lg:flex justify-between px-6 pt-8 lg:pt-32 pb-6 lg:pb-28">
         <div className="lg:w-1/4 pb-12 lg:pb-0">
           <img className="mb-8" src="/images/logo-lg.png" alt="logo" />
-          <p className="text-white text-xl">
+          {/* <p className="text-white text-xl">
             9 Kramer Road, Kramerville
           </p>
           <p className="text-white text-xl">
@@ -15,7 +15,7 @@ const Footer = () => (
           </p>
           <p className="text-white text-xl">
             South Africa
-          </p>
+          </p> */}
         </div>
         <div className="lg:w-1/2 sm:flex justify-between lg:justify-end">
           <div className="lg:pr-24 pb-12 lg:pb-0">

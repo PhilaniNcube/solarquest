@@ -16,9 +16,9 @@ const Products = ({
     <section className="my-10">
       <div className="mx-auto max-w-7xl">
         <h2 className="text-center text-3xl md:text-4xl text-red-600 font-bold">
-          Residential Solar & Back-Up Power Solutions
+          PREMIUM LINE
         </h2>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
           {residentialPackages.map((product) => (
             <motion.div
               key={product.id}
@@ -41,24 +41,23 @@ const Products = ({
                   <p className="text-gray-600 font-medium text-sm mt-1">
                     {product.solution}
                   </p>
-                  
-                     <p className="text-gray-600 font-medium text-sm  mt-1">
+
+                  <p className="text-gray-600 font-medium text-sm  mt-1">
                     {product.design}
                   </p>
-                  
-                    <p className="text-gray-600 font-medium text-sm  mt-1">
+
+                  <p className="text-gray-600 font-medium text-sm  mt-1">
                     {product.level}
                   </p>
-
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
         <h2 className="text-center mt-16 text-3xl md:text-4xl text-red-600 font-bold">
-          Business Solar & Back-Up Power Solutions
+          VALUE LINE
         </h2>
-        <div className="mb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+        <div className="mb-20 grid grid-cols-1 md:grid-cols-2  gap-x-6 gap-y-12">
           {businessPackages.map((product) => (
             <motion.div
               key={product.id}
@@ -70,7 +69,7 @@ const Products = ({
                 src={product.image}
                 width={1101}
                 height={895}
-                className="h-64 object-cover aspect-video rounded-lg"
+                className="w-full object-cover rounded-lg"
                 alt={product.name}
               />
               <div className="mt-3 flex flex-col justify-between px-4">
@@ -81,15 +80,14 @@ const Products = ({
                   <p className="text-gray-600 font-medium text-sm  mt-1">
                     {product.solution}
                   </p>
-                  
-                    <p className="text-gray-600 font-medium text-sm  mt-1">
+
+                  <p className="text-gray-600 font-medium text-sm  mt-1">
                     {product.design}
                   </p>
-                  
-                    <p className="text-gray-600 font-medium text-sm  mt-1">
+
+                  <p className="text-gray-600 font-medium text-sm  mt-1">
                     {product.level}
                   </p>
-
                 </div>
               </div>
             </motion.div>

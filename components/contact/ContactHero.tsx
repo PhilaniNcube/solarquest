@@ -92,7 +92,7 @@ const ContactHero = () => {
             <span>
               <RiMailAddLine className="mr-3 h-6 w-6" />
             </span>{" "}
-            marketing@solarquest.co.za
+            info@solarquest.co.za
           </article>
         </div>
         <div className="flex flex-col justify-center">

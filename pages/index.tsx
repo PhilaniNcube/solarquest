@@ -1,6 +1,7 @@
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import AnyGrid from '../components/home/AnyGrid'
 import Hero from '../components/home/Hero'
 import HomeSectionFour from '../components/home/HomeSectionFour'
 import HomeSectionOne from '../components/home/HomeSectionOne'
@@ -32,7 +33,8 @@ const Home: NextPage = () => {
       </Head>
       <Hero />
       <HomeSectionOne />
-      <RebelDuo />
+      {/* <RebelDuo /> */}
+      <AnyGrid />
       {/**<Solutions /> */}
       <HomeSectionThree />
       <HomeSectionFour />
