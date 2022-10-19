@@ -17,7 +17,7 @@
     "analytics": "^0.8.1",
     "axios": "^0.27.2",
     "framer-motion": "^6.5.1",
-    "next": "^12.2.0",
+    "next": "^12.3.1",
     "next-sitemap": "^3.1.21",
     "pipedrive": "^17.0.0",
     "react": "18.1.0",
