@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { RiFacebookBoxLine, RiFacebookCircleFill, RiFacebookFill, RiFacebookLine, RiLinkedinFill, RiTwitterFill } from "react-icons/ri";
+import { RiCellphoneLine, RiFacebookBoxLine, RiFacebookCircleFill, RiFacebookFill, RiFacebookLine, RiLinkedinFill, RiTwitterFill, RiWhatsappLine } from "react-icons/ri";
 
 const Footer = () => (
   <footer>
@@ -7,6 +7,13 @@ const Footer = () => (
       <div className="max-w-7xl relative z-10 mx-auto lg:flex justify-between px-6 pt-8 lg:pt-32 pb-6 lg:pb-28">
         <div className="lg:w-1/4 pb-12 lg:pb-0">
           <img className="mb-8" src="/images/logo-lg.png" alt="logo" />
+          <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-white">
+            <span>
+
+              <RiWhatsappLine className="mr-3 h-6 w-6" />
+            </span>{" "}
+            +27 81 838 1088
+          </article>
           {/* <p className="text-white text-xl">
             9 Kramer Road, Kramerville
           </p>
@@ -80,19 +87,19 @@ const Footer = () => (
         <div className="lg:w-1/4 flex lg:justify-end items-end mt-12 lg:mt-0">
           <div className="bg-white p-1 rounded-full mr-2.5">
             <Link href="https://www.facebook.com/SolarquestSA">
-            <RiFacebookFill className="text-red-600 h-6 w-6 bg-white md:h-10 md:w-10 rounded-full" />
+              <RiFacebookFill className="text-red-600 h-6 w-6 bg-white md:h-10 md:w-10 rounded-full" />
             </Link>
-              </div>
+          </div>
           <div className="bg-white p-1 rounded-full mr-2.5">
             <Link href="https://twitter.com/solarquestsa">
-            <RiTwitterFill className="text-red-600 h-6 w-6 bg-white md:h-10 md:w-10 rounded-full" />
+              <RiTwitterFill className="text-red-600 h-6 w-6 bg-white md:h-10 md:w-10 rounded-full" />
             </Link>
-              </div>
+          </div>
           <div className="bg-white p-1 rounded-full mr-2.5">
             <Link href="https://www.linkedin.com/company/solarquestco/?originalSubdomain=za">
-            <RiLinkedinFill className="text-red-600 h-6 w-6 bg-white md:h-10 md:w-10 rounded-full" />
+              <RiLinkedinFill className="text-red-600 h-6 w-6 bg-white md:h-10 md:w-10 rounded-full" />
             </Link>
-              </div>
+          </div>
         </div>
       </div>
     </div>

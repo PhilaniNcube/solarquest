@@ -54,20 +54,20 @@ const ContactHero = () => {
             Projects should serve a purpose beyond meeting objectives, they must
             be long-lasting, impactful and sustainable for future generations.
           </p>
-          <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
+          {/* <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
             <span>
               <RiMapPin2Line className="mr-3 h-6 w-6" />
             </span>{" "}
             9 Kramer Road, Kramerville, <br />
             Sandton, Johannesburg
-          </article>
+          </article> */}
 
-          <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
+          {/* <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
             <span>
               <RiPhoneLine className="mr-3 h-6 w-6" />
             </span>{" "}
             +27 10 055 3151
-          </article>
+          </article> */}
           <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
             <span>
               <RiMapPin2Line className="mr-3 h-6 w-6" />
