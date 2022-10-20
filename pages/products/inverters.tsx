@@ -34,7 +34,7 @@ const Inverters = () => {
         cells (PV's) has been dropping drastically. This now means that for
         people able to come up with the initial capital to install a solar
         solution, the whole excersise is now proving to be a cheaper alternative
-        to getting electricity from your local electricty.{" "}
+        to getting electricity from your local electricity.{" "}
       </p>
       <h2 className="text-xl md:text-2xl md:font-extrabold font-bold text-red-600 mt-4">
         Reliable Power

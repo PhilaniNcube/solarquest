@@ -12,11 +12,11 @@ const HomeSectionThree = () => {
           </h2>
           <p className="text-base text-red-600 text-right max-w-[55ch] mt-2">
             Have you been considering changing from relying on Eskom for your
-            electricty? With{" "}
+            electricity? With{" "}
             <span className="font-bold">Load shedding</span> becoming more
             prevalent. Solar power is now a lot more attractive. Besides
             providing you with a renewable source of electricity, it can also save you
-            money on your electricty bill, so it is a good investment especially
+            money on your electricity bill, so it is a good investment especially
             in these times.
           </p>
           <Link href="/products">

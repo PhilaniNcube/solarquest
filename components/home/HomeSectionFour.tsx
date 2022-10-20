@@ -60,7 +60,7 @@ export default function HomeSectionFour() {
                     In order to be completely Off The Grid, you need to ensure
                     that your battery storage is enough to store all the energy
                     you will need to use while the sun is not producing
-                    electricty.
+                    electricity.
                   </p>
                 </div>
               </div>

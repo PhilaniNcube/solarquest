@@ -187,7 +187,7 @@ const ContactHero = () => {
                   className="placeholder:text-slate-700 text-sm font-medium "
                   htmlFor="electricity"
                 >
-                  What is your current electricty bill?
+                  What is your current electricity bill?
                 </label>
                 <select
                   className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"

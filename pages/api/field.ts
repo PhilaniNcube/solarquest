@@ -16,10 +16,10 @@ export default async function handler(
 },
     { 'name': `electricity`,
     'field_type': 'varchar',
-    'options': [{"label": "Electricty"}]
+    'options': [{"label": "electricity"}]
 },
   ]
-//  const {first_name, last_name, email, address, telephone, electricty} = req.body
+//  const {first_name, last_name, email, address, telephone, electricity} = req.body
 
  const request = await fetch(`https://solarquest2.pipedrive.com/api/v1/personFields?api_token=${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`, {
   method: 'POST',
