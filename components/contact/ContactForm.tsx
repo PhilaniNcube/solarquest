@@ -1,13 +1,16 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useState } from "react";
 import analytics from "../../utils/analytics";
 
 const ContactForm = () => {
+
+  const [loading, setLoading] = useState(false)
 
    const router = useRouter();
 
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
      e.preventDefault();
+     setLoading(true)
 
 
 
@@ -36,11 +39,21 @@ const ContactForm = () => {
 
      let response = await request.json()
 
-     console.log(response)
+     console.log()
 
-     analytics.track("generate_lead", {
-      id: response.data?.id
-     });
+     console.log({ status: request.status, body: response });
+
+
+     if (request.status === 400) {
+      alert('There was an error processing the request. Please check that you have not already submitted a form before, or that your email address is correct.')
+      setLoading(false)
+      return
+     }
+       analytics.track("generate_lead", {
+         id: response.data?.id,
+       });
+
+     setLoading(false)
 
      router.push("/thankyou");
    };
@@ -166,9 +179,10 @@ const ContactForm = () => {
 
         <button
           type="submit"
+          disabled={loading}
           className="bg-red-600 rounded-lg text-white py-2 px-6 font-bold mt-3"
         >
-          Submit
+          {loading ? 'Loading...' : 'Submit'}
         </button>
       </form>
     </div>

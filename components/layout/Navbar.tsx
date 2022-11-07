@@ -42,11 +42,6 @@ const Navbar = () => {
   const [open, setOpen] = useState(false)
 
 
-
-
-
-  console.log(user)
-
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset;

@@ -24,7 +24,7 @@ export default async function handler(
 
 
   if (error) {
-    res.status(400).send({message: error.message})
+    res.status(400).json({message: error.details, error: error})
     return
   }
 
@@ -74,5 +74,5 @@ export default async function handler(
 
  let leadResponse = await leadRequest.json()
 
-  res.status(200).json({message: response, data: data, lead: leadResponse})
+  res.status(200).json({message: 'All Good!', data: data, lead: leadResponse})
 }
