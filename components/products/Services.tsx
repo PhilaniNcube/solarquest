@@ -11,9 +11,10 @@ const Services = () => {
           </h2>
           <p className="text-gray-600 font-medium text-lg mt-3">
             Going solar has the potential of saving you money over time. You may
-            have to come up with a large amount up front, but with our financing
+            have to come up with a large amount up front.
+            {/** but with our financing
             options you could be paying as little as{" "}
-            <span className="text-red-600 font-bold">R2499/month</span>
+            <span className="text-red-600 font-bold">R2499/month</span>*/}
           </p>
           <p className="text-gray-600 font-medium text-lg mt-3">
             Also with load shedding becoming a daily occurance, Solar Power has
@@ -24,16 +25,19 @@ const Services = () => {
             solution.
           </p>
           <Link href="/contact">
-          <button
-            className="mt-2 bg-red-600 max-w-[180px] text-white font-bold text-md px-8 py-2 rounded"
-
-            >
-            I am interested
-          </button>
+            <button className="mt-2 bg-red-600 max-w-[180px] text-white font-bold text-md px-8 py-2 rounded">
+              I am interested
+            </button>
           </Link>
         </div>
         <div className="w-full bg-gray-400 rounded-lg relative">
-          <Image src="/images/roof.jpg" alt="roof" width={1920} height={1080} className="w-full object-cover rounded-lg" />
+          <Image
+            src="/images/roof.jpg"
+            alt="roof"
+            width={1920}
+            height={1080}
+            className="w-full object-cover rounded-lg"
+          />
         </div>
       </div>
     </section>
