@@ -9,20 +9,18 @@ const Services = () => {
           <h2 className="text-2xl md:text-4xl text-red-600 font-bold">
             Why should you chose Solar?
           </h2>
+
           <p className="text-gray-600 font-medium text-lg mt-3">
-            Going solar has the potential of saving you money over time. You may
-            have to come up with a large amount up front.
-            {/** but with our financing
-            options you could be paying as little as{" "}
-            <span className="text-red-600 font-bold">R2499/month</span>*/}
+            Going solar will give you and your family the long term stability of
+            consistent electricity at a fixed price. All long as the sun is
+            shining your power has no additional running costs beyond your
+            initial investment.
           </p>
           <p className="text-gray-600 font-medium text-lg mt-3">
-            Also with load shedding becoming a daily occurance, Solar Power has
-            also become more reliable than electricity from Eskom.
-          </p>
-          <p className="text-gray-600 font-medium text-lg mt-3">
-            Get in touch with us and we will be able to get you the best
-            solution.
+            With load shedding becoming a constant in the daily lives in South
+            Africa, unreliable power, exorbitant costs and constant electricity
+            price increases will be a thing of the past with a Solarquest Solar
+            Solution!
           </p>
           <Link href="/contact">
             <button className="mt-2 bg-red-600 max-w-[180px] text-white font-bold text-md px-8 py-2 rounded">
