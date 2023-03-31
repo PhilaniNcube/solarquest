@@ -12,11 +12,12 @@ type Props = {
   };
 };
 
-const ContactHero = ({query}:Props) => {
+const ContactHero = () => {
 
   const [loading, setLoading] = useState(false)
-
   const router = useRouter()
+  const query = router.query
+
 
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
      e.preventDefault();

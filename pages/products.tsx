@@ -1,13 +1,13 @@
-import { NextPage } from "next";
+
 import Head from "next/head";
-import { useRouter } from "next/router";
+
 import { useQuery } from "react-query";
-import Productgrid from "../components/products/ProductGrid";
+
 import Products from "../components/products/Products";
 import ProductsDivider from "../components/products/ProductsDivider";
 import ProductsHero from "../components/products/ProductsHero";
 import Services from "../components/products/Services";
-import getPackages, { getBusiness, getResidential } from "../fetchers/packages";
+import  { getBusiness, getResidential } from "../fetchers/packages";
 import { Package } from "../Types";
 
 const ProductsPage = ({
@@ -29,11 +29,10 @@ const ProductsPage = ({
     refetchOnWindowFocus: false,
   });
 
-     const router = useRouter();
 
-     const query = router.query;
 
-     console.log({ query });
+
+
 
   return (
     <>

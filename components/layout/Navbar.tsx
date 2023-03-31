@@ -13,6 +13,7 @@ import analytics from "../../utils/analytics";
 const Navbar = () => {
 
   const router = useRouter();
+  const query = router.query;
 
   const navLinks = [
     {
@@ -37,6 +38,16 @@ const Navbar = () => {
     },
   ]
 
+  console.log({query})
+
+   const [params, setParams] = useState({
+     utm_source: query.utm_source ,
+     utm_medium: query.utm_medium ,
+     utm_campaign: query.utm_campaign ,
+   });
+
+   console.log(params)
+
   const { isLoading, user, error } = useUser();
 
   const [open, setOpen] = useState(false)
@@ -50,6 +61,8 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+
+
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -65,9 +78,7 @@ const Navbar = () => {
       }`}
     >
       {/* Desktop Nav Starts */}
-      <nav
-        className="max-w-7xl mx-auto px-4 py-3 hidden md:flex items-center justify-between bg-transparent text-white"
-      >
+      <nav className="max-w-7xl mx-auto px-4 py-3 hidden md:flex items-center justify-between bg-transparent text-white">
         <Link href="/">
           <AnimatePresence>
             <motion.img
@@ -83,8 +94,18 @@ const Navbar = () => {
         <div className="flex items-center">
           <span className="flex space-x-3 text-gray-800 text-base">
             {navLinks.map((link) => (
-              <Link href={link.href} key={link.href}>
-                <motion.div animate={{opacity: link.active ? 1 : .8}}>
+              <Link
+                href={{
+                  pathname: link.href,
+                  query: {
+                    utm_source: query.utm_source,
+                    utm_medium: query.utm_medium,
+                    utm_campaign: query.utm_campaign,
+                  },
+                }}
+                key={link.href}
+              >
+                <motion.div animate={{ opacity: link.active ? 1 : 0.8 }}>
                   <a
                     className={`text-md hover:text-red-500 font-bold ${
                       link.active
@@ -94,19 +115,32 @@ const Navbar = () => {
                   >
                     {link.link}
                   </a>
-                   {link.active && (
-                  <motion.div
-                    className="underline h-1 bg-red-500"
-                    layoutId="underline"
-                  />)}
+                  {link.active && (
+                    <motion.div
+                      className="underline h-1 bg-red-500"
+                      layoutId="underline"
+                    />
+                  )}
                 </motion.div>
               </Link>
             ))}
           </span>
           {!user ? (
             <Fragment>
-              <Link href="/contact">
-                <button onClick={() => analytics.track('Goal - 1')} className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
+              <Link
+                href={{
+                  pathname: "/contact",
+                  query: {
+                    utm_source: query.utm_source,
+                    utm_medium: query.utm_medium,
+                    utm_campaign: query.utm_campaign,
+                  },
+                }}
+              >
+                <button
+                  onClick={() => analytics.track("Goal - 1")}
+                  className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white"
+                >
                   Get in touch
                 </button>
               </Link>
@@ -119,7 +153,16 @@ const Navbar = () => {
             </Fragment>
           ) : (
             <Fragment>
-              <Link href="/contact">
+              <Link
+                href={{
+                  pathname: "/contact",
+                  query: {
+                    utm_source: query.utm_source,
+                    utm_medium: query.utm_medium,
+                    utm_campaign: query.utm_campaign,
+                  },
+                }}
+              >
                 <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
                   Get in touch
                 </button>
@@ -163,7 +206,17 @@ const Navbar = () => {
               />
               <div className="flex flex-col px-6 space-y-4 justify-between items-center py-8 w-full">
                 {navLinks.map((link) => (
-                  <Link href={link.href} key={link.href}>
+                  <Link
+                    href={{
+                      pathname: link.href,
+                      query: {
+                        utm_source: query.utm_source,
+                        utm_medium: query.utm_medium,
+                        utm_campaign: query.utm_campaign,
+                      },
+                    }}
+                    key={link.href}
+                  >
                     <a
                       className="text-white font-medium text-xl"
                       onClick={() => setOpen(false)}
@@ -176,7 +229,16 @@ const Navbar = () => {
                 <div className="w-full items-center py-4 rounded flex flex-col space-y-4">
                   {user ? (
                     <>
-                      <Link href="/contact">
+                      <Link
+                        href={{
+                          pathname: "/contact",
+                          query: {
+                            utm_source: query.utm_source,
+                            utm_medium: query.utm_medium,
+                            utm_campaign: query.utm_campaign,
+                          },
+                        }}
+                      >
                         <button
                           onClick={() => setOpen(false)}
                           className="ml-4 bg-white rounded-full px-6 font-bold py-2 text-red-600"
@@ -187,13 +249,21 @@ const Navbar = () => {
                     </>
                   ) : (
                     <>
-                      <Link href="/contact">
+                      <Link
+                        href={{
+                          pathname: "/contact",
+                          query: {
+                            utm_source: query.utm_source,
+                            utm_medium: query.utm_medium,
+                            utm_campaign: query.utm_campaign,
+                          },
+                        }}
+                      >
                         <button
                           onClick={() => {
-                           analytics.track("Goal - 1");
-                            setOpen(false)
-                          }
-                        }
+                            analytics.track("Goal - 1");
+                            setOpen(false);
+                          }}
                           className="ml-4 bg-white rounded-full px-6 font-bold py-2 text-red-600"
                         >
                           Get in touch
