@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useQuery } from "react-query";
 import Productgrid from "../components/products/ProductGrid";
 import Products from "../components/products/Products";
@@ -27,6 +28,12 @@ const ProductsPage = ({
     refetchOnMount: false,
     refetchOnWindowFocus: false,
   });
+
+     const router = useRouter();
+
+     const query = router.query;
+
+     console.log({ query });
 
   return (
     <>

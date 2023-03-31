@@ -8,6 +8,10 @@ const ContactForm = () => {
 
    const router = useRouter();
 
+    const query = router.query;
+
+    console.log("Query", query );
+
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
      e.preventDefault();
      setLoading(true)
@@ -33,13 +37,14 @@ const ContactForm = () => {
           telephone: telephone,
           address: address,
           electricity: electricity,
+          utm_campaign:query?.utm_campaign || '',
+          utm_source:query?.utm_source || "",
+          utm_medium:query?.utm_medium|| "",
          }),
        }
      );
 
      let response = await request.json()
-
-     console.log()
 
      console.log({ status: request.status, body: response });
 

@@ -4,7 +4,15 @@ import React, { useState } from "react";
 import { RiCellphoneLine, RiMailAddLine, RiMapPin2Line, RiPhoneCameraLine, RiPhoneLine } from "react-icons/ri";
 import analytics from "../../utils/analytics";
 
-const ContactHero = () => {
+type Props = {
+  query: {
+    utm_source?: string;
+    utm_medium?: string;
+    utm_campaign?: string;
+  };
+};
+
+const ContactHero = ({query}:Props) => {
 
   const [loading, setLoading] = useState(false)
 
@@ -32,6 +40,9 @@ const ContactHero = () => {
          telephone: telephone,
          address: address,
          electricity: electricity,
+         utm_campaign: query?.utm_campaign || "",
+         utm_source: query?.utm_source || "",
+          utm_medium: query?.utm_medium || "",
        }),
      });
 

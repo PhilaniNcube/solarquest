@@ -8,9 +8,11 @@ import Footer from '../components/layout/Footer'
 import { UserProvider } from '@supabase/auth-helpers-react'
 import { supabaseClient } from '@supabase/auth-helpers-nextjs'
 import analytics from '../utils/analytics'
+import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = React.useState(() => new QueryClient({}))
+
 
 
    useEffect(() => {

@@ -83,7 +83,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <span className="flex space-x-3 text-gray-800 text-base">
             {navLinks.map((link) => (
-              <Link href={link.href}>
+              <Link href={link.href} key={link.href}>
                 <motion.div animate={{opacity: link.active ? 1 : .8}}>
                   <a
                     className={`text-md hover:text-red-500 font-bold ${
@@ -163,7 +163,7 @@ const Navbar = () => {
               />
               <div className="flex flex-col px-6 space-y-4 justify-between items-center py-8 w-full">
                 {navLinks.map((link) => (
-                  <Link href={link.href}>
+                  <Link href={link.href} key={link.href}>
                     <a
                       className="text-white font-medium text-xl"
                       onClick={() => setOpen(false)}
