@@ -14,9 +14,18 @@ const Home: NextPage = () => {
 
   const router = useRouter();
 
-  const query = router.query
 
-  console.log({query})
+
+  const url = new URL(`https://solarquest.co.za${router.asPath}`);
+  console.log(url);
+  const source = url.searchParams.get("utm_source");
+  const google = url.searchParams.get("gclid");
+  const facebook = url.searchParams.get("fbclid");
+  const medium = url.searchParams.get("utm_medium");
+  console.log({ source, google, facebook, medium });
+  const query = router.query;
+
+  console.log({ query });
 
   return (
     <>

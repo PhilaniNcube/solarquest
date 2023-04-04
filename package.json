@@ -16,6 +16,7 @@
     "@supabase/supabase-js": "^1.35.4",
     "analytics": "^0.8.1",
     "axios": "^0.27.2",
+    "cookies": "^0.8.0",
     "framer-motion": "^6.5.1",
     "next": "^12.3.1",
     "next-sitemap": "^3.1.21",

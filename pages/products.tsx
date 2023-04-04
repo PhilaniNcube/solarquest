@@ -9,13 +9,16 @@ import ProductsHero from "../components/products/ProductsHero";
 import Services from "../components/products/Services";
 import  { getBusiness, getResidential } from "../fetchers/packages";
 import { Package } from "../Types";
+import { NextRequest, NextResponse } from "next/server";
 
 const ProductsPage = ({
   businessPackages,
   residentialPackages,
+
 }: {
   businessPackages: Package[];
   residentialPackages: Package[];
+
 }) => {
   const businessPackageQuery = useQuery("businessPackages", getBusiness, {
     initialData: businessPackages,
@@ -68,7 +71,12 @@ const ProductsPage = ({
 export default ProductsPage;
 
 
-export async function getStaticProps() {
+export async function getStaticProps(req:NextRequest, res:NextResponse) {
+
+
+  const data = await req.referrer
+
+  console.log(data)
 
   const residentialPackages = await getResidential();
   const businessPackages = await getBusiness();
@@ -77,6 +85,7 @@ export async function getStaticProps() {
     props: {
       residentialPackages,
       businessPackages,
+
     },
   };
 }
