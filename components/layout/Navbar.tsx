@@ -40,13 +40,7 @@ const Navbar = () => {
 
   console.log({query})
 
-   const [params, setParams] = useState({
-     utm_source: query.utm_source ,
-     utm_medium: query.utm_medium ,
-     utm_campaign: query.utm_campaign ,
-   });
 
-   console.log(params)
 
   const { isLoading, user, error } = useUser();
 
@@ -98,8 +92,16 @@ const Navbar = () => {
                 href={{
                   pathname: link.href,
                   query: {
-                    utm_source: query.utm_source,
-                    utm_medium: query.utm_medium,
+                    utm_source: !!query.fbclid
+                      ? "facebook"
+                      : !!query.gclid
+                      ? "google"
+                      : query.utm_source,
+                    utm_medium: !!query.fbclid
+                      ? "paid social"
+                      : !!query.gclid
+                      ? "cpc"
+                      : query.utm_medium,
                     utm_campaign: query.utm_campaign,
                   },
                 }}
@@ -131,8 +133,16 @@ const Navbar = () => {
                 href={{
                   pathname: "/contact",
                   query: {
-                    utm_source: query.utm_source,
-                    utm_medium: query.utm_medium,
+                    utm_source: !!query.fbclid
+                      ? "facebook"
+                      : !!query.gclid
+                      ? "google"
+                      : query.utm_source,
+                    utm_medium: !!query.fbclid
+                      ? "paid social"
+                      : !!query.gclid
+                      ? "cpc"
+                      : query.utm_medium,
                     utm_campaign: query.utm_campaign,
                   },
                 }}
