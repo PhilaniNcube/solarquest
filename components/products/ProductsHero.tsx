@@ -67,7 +67,7 @@ useEffect(() => {
                 Independent!
               </p>
               <div
-                onClick={() => router.push(`/contact?utm_source=${!!query.fbclid ? "facebook" : utm_source }&utm_medium=${query.utm_medium}&utm_campaign=${query.utm_campaign}`)}
+                onClick={() => router.push(`/contact?utm_source=${!!query.fbclid ? "facebook" : query.utm_source }&utm_medium=${query.utm_medium}&utm_campaign=${query.utm_campaign}`)}
                 className="flex items-center rounded-lg justify-between bg-red-600 px-4 py-3 w-fit mt-8 hover:bg-gray-600 cursor-pointer duration-200"
               >
                 <button
