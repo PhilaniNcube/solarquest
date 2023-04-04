@@ -15,30 +15,26 @@ function index() {
    const facebook = url.searchParams.get("fbclid");
    const medium = url.searchParams.get("utm_medium");
 
+    const setSource = () => {
+      console.log("referrer", document.referrer);
 
-
-   const setSource = () => {
-
-    console.log("referrer",document.referrer)
-
-    if(source !== undefined && source !== "gclid" && source !== "fbclid" && source !== "") {
-      localStorage.setItem("utm_source", "organic")
-      localStorage.setItem("utm_medium", "(not set)")
-    } else if(google) {
-      localStorage.setItem("utm_source", "google")
-      localStorage.setItem("utm_medium", "ppc")
-    } else if (facebook) {
-      localStorage.setItem("utm_source", "facebook")
-      localStorage.setItem("utm_medium", "paid social");
-    } else if (source === undefined) {
-      localStorage.setItem("utm_source", "direct")
-      localStorage.setItem("utm_medium", "(not set)");
-    } else {
-      localStorage.setItem("utm_source", "none")
-      localStorage.setItem("utm_medium", "");
-
-    }
-   }
+      if (source && medium) {
+        localStorage.setItem("utm_source", source);
+        localStorage.setItem("utm_medium", medium);
+      } else if (google) {
+        localStorage.setItem("utm_source", "google");
+        localStorage.setItem("utm_medium", "ppc");
+      } else if (facebook) {
+        localStorage.setItem("utm_source", "facebook");
+        localStorage.setItem("utm_medium", "paid social");
+      } else if (source === undefined) {
+        localStorage.setItem("utm_source", "direct");
+        localStorage.setItem("utm_medium", "(not set)");
+      } else {
+        localStorage.setItem("utm_source", "direct");
+        localStorage.setItem("utm_medium", "(not set)");
+      }
+    };
 
 
 
