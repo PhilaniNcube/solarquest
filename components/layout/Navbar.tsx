@@ -88,25 +88,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <span className="flex space-x-3 text-gray-800 text-base">
             {navLinks.map((link) => (
-              <Link
-                href={{
-                  pathname: link.href,
-                  query: {
-                    utm_source: !!query.fbclid
-                      ? "facebook"
-                      : !!query.gclid
-                      ? "google"
-                      : query.utm_source,
-                    utm_medium: !!query.fbclid
-                      ? "paid social"
-                      : !!query.gclid
-                      ? "cpc"
-                      : query.utm_medium,
-                    utm_campaign: query.utm_campaign,
-                  },
-                }}
-                key={link.href}
-              >
+              <Link href={link.href} key={link.href}>
                 <motion.div animate={{ opacity: link.active ? 1 : 0.8 }}>
                   <a
                     className={`text-md hover:text-red-500 font-bold ${
@@ -129,24 +111,7 @@ const Navbar = () => {
           </span>
           {!user ? (
             <Fragment>
-              <Link
-                href={{
-                  pathname: "/contact",
-                  query: {
-                    utm_source: !!query.fbclid
-                      ? "facebook"
-                      : !!query.gclid
-                      ? "google"
-                      : query.utm_source,
-                    utm_medium: !!query.fbclid
-                      ? "paid social"
-                      : !!query.gclid
-                      ? "cpc"
-                      : query.utm_medium,
-                    utm_campaign: query.utm_campaign,
-                  },
-                }}
-              >
+              <Link href="/contact">
                 <button
                   onClick={() => analytics.track("Goal - 1")}
                   className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white"
@@ -163,16 +128,7 @@ const Navbar = () => {
             </Fragment>
           ) : (
             <Fragment>
-              <Link
-                href={{
-                  pathname: "/contact",
-                  query: {
-                    utm_source: query.utm_source,
-                    utm_medium: query.utm_medium,
-                    utm_campaign: query.utm_campaign,
-                  },
-                }}
-              >
+              <Link href="/contact">
                 <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
                   Get in touch
                 </button>
@@ -216,17 +172,7 @@ const Navbar = () => {
               />
               <div className="flex flex-col px-6 space-y-4 justify-between items-center py-8 w-full">
                 {navLinks.map((link) => (
-                  <Link
-                    href={{
-                      pathname: link.href,
-                      query: {
-                        utm_source: query.utm_source,
-                        utm_medium: query.utm_medium,
-                        utm_campaign: query.utm_campaign,
-                      },
-                    }}
-                    key={link.href}
-                  >
+                  <Link href={link.href} key={link.href}>
                     <a
                       className="text-white font-medium text-xl"
                       onClick={() => setOpen(false)}
@@ -239,16 +185,7 @@ const Navbar = () => {
                 <div className="w-full items-center py-4 rounded flex flex-col space-y-4">
                   {user ? (
                     <>
-                      <Link
-                        href={{
-                          pathname: "/contact",
-                          query: {
-                            utm_source: query.utm_source,
-                            utm_medium: query.utm_medium,
-                            utm_campaign: query.utm_campaign,
-                          },
-                        }}
-                      >
+                      <Link href="/contact">
                         <button
                           onClick={() => setOpen(false)}
                           className="ml-4 bg-white rounded-full px-6 font-bold py-2 text-red-600"
@@ -259,16 +196,7 @@ const Navbar = () => {
                     </>
                   ) : (
                     <>
-                      <Link
-                        href={{
-                          pathname: "/contact",
-                          query: {
-                            utm_source: query.utm_source,
-                            utm_medium: query.utm_medium,
-                            utm_campaign: query.utm_campaign,
-                          },
-                        }}
-                      >
+                      <Link href="/contact">
                         <button
                           onClick={() => {
                             analytics.track("Goal - 1");
