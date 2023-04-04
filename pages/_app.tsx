@@ -13,7 +13,11 @@ import { useRouter } from 'next/router'
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = React.useState(() => new QueryClient({}))
 
+  const router = useRouter();
+  const query = router.query;
 
+  const data = Object.entries(query);
+  console.log(data);
 
    useEffect(() => {
      analytics.page();
