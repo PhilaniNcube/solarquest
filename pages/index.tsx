@@ -7,6 +7,7 @@ import Hero from '../components/home/Hero'
 import HomeSectionFour from '../components/home/HomeSectionFour'
 import HomeSectionOne from '../components/home/HomeSectionOne'
 import HomeSectionThree from '../components/home/HomeSectionThree'
+import {NextRequest} from 'next/server'
 import RebelDuo from '../components/home/RebelDuo'
 import Solutions from '../components/home/Solutions'
 
@@ -60,3 +61,14 @@ const Home: NextPage = () => {
 export default Home
 
 
+export async function getServerSideProps(req: NextRequest) {
+
+const referrer = req.referrer
+console.log(`getServerSideProps`, referrer)
+
+return {
+props: {
+  data: ""
+}
+}
+}
