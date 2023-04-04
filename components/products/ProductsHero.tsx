@@ -2,21 +2,47 @@ import { useRouter } from "next/router";
 import React, { useEffect , useState} from "react";
 import analytics from "../../utils/analytics";
 import { NextRequest, NextResponse } from "next/server";
+import { getVisitorSource, getReferrer } from "@analytics/visitor-source";
 
 function index() {
-
-
-
   const router = useRouter()
-
-
   const query = router.query
 
- const [params, setParams] = React.useState({
-    utm_source: query.utm_source || "",
-    utm_medium: query.utm_medium || "",
-    utm_campaign: query.utm_campaign || "",
- })
+   const url = new URL(`https://solarquest.co.za${router.asPath}`);
+   console.log(url);
+   const source = url.searchParams.get("utm_source");
+   const google = url.searchParams.get("gclid");
+   const facebook = url.searchParams.get("fbclid");
+   const medium = url.searchParams.get("utm_medium");
+
+
+
+   const setSource = () => {
+
+    console.log("referrer",document.referrer)
+
+    if(source !== undefined && source !== "gclid" && source !== "fbclid" && source !== "") {
+      localStorage.setItem("utm_source", "organic")
+      localStorage.setItem("utm_medium", "(not set)")
+    } else if(google) {
+      localStorage.setItem("utm_source", "google")
+      localStorage.setItem("utm_medium", "ppc")
+    } else if (facebook) {
+      localStorage.setItem("utm_source", "facebook")
+      localStorage.setItem("utm_medium", "paid social");
+    } else if (source === undefined) {
+      localStorage.setItem("utm_source", "direct")
+      localStorage.setItem("utm_medium", "(not set)");
+    } else {
+      localStorage.setItem("utm_source", "none")
+      localStorage.setItem("utm_medium", "");
+
+    }
+   }
+
+
+
+
 
 
 
@@ -55,8 +81,8 @@ function index() {
               </p>
               <div
                 onClick={() => {
-
-                  router.push(`/contact?utm_source=${!!query.fbclid ? "facebook" : query.utm_source }&utm_medium=${query.utm_medium}&utm_campaign=${query.utm_campaign}`)
+                  setSource()
+                  router.push(`/contact`)
                 }
                 }
                 className="flex items-center rounded-lg justify-between bg-red-600 px-4 py-3 w-fit mt-8 hover:bg-gray-600 cursor-pointer duration-200"

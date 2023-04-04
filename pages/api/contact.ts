@@ -70,8 +70,8 @@ export default async function handler(
      '10765cf01debaaf7f6a391d8ae6baefea4df2ecc': address,
     '49ffed0939c4895d3f5f61c32254fc709c033b59': electricity,
     '7ee5859401172e95ec2e7d4e43e00c4effeaf4c4': utm_campaign === undefined ? '' : utm_campaign,
-    '24e2172d06a275ad34d27d44092df64adaf5868f': utm_medium === undefined ? '(not set)' : utm_medium === '' ? '(not set)' : utm_medium,
-    'b309313bb7967eb804330b0fc9d4e2bda01cfa8a': utm_source === undefined ? 'direct'  :   utm_source === '' ? 'direct' :  utm_source,
+    '24e2172d06a275ad34d27d44092df64adaf5868f': utm_medium,
+    'b309313bb7967eb804330b0fc9d4e2bda01cfa8a': utm_source,
 
   })
  })

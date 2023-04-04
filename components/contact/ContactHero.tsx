@@ -1,8 +1,9 @@
 import Image from "next/future/image";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { RiCellphoneLine, RiMailAddLine, RiMapPin2Line, RiPhoneCameraLine, RiPhoneLine } from "react-icons/ri";
 import analytics from "../../utils/analytics";
+
 
 type Props = {
   query: {
@@ -18,12 +19,57 @@ const ContactHero = () => {
   const router = useRouter()
   const query = router.query
 
+     const url = new URL(`https://solarquest.co.za${router.asPath}`);
+     console.log(url);
+     const source = url.searchParams.get("utm_source");
+     const google = url.searchParams.get("gclid");
+     const facebook = url.searchParams.get("fbclid");
+     const medium = url.searchParams.get("utm_medium");
+
+   const setSource = () => {
+     console.log("referrer", document.referrer);
+
+     if (
+       source !== undefined &&
+       source !== "gclid" &&
+       source !== "fbclid" &&
+       source !== ""
+     ) {
+       localStorage.setItem("utm_source", "organic");
+       localStorage.setItem("utm_medium", "(not set)");
+     } else if (google) {
+       localStorage.setItem("utm_source", "google");
+       localStorage.setItem("utm_medium", "ppc");
+     } else if (facebook) {
+       localStorage.setItem("utm_source", "facebook");
+       localStorage.setItem("utm_medium", "paid social");
+     } else if (source === undefined) {
+       localStorage.setItem("utm_source", "direct");
+       localStorage.setItem("utm_medium", "(not set)");
+     } else {
+       localStorage.setItem("utm_source", "none");
+       localStorage.setItem("utm_medium", "");
+     }
+   };
+
+
+   useEffect(() => {
+    // check if we are on the client
+    if (typeof window !== "undefined") {
+      setSource();
+    }
+   },[])
+
+
+
+
 
    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
      e.preventDefault();
      setLoading(true)
 
-
+         const source = localStorage.getItem("utm_source");
+         const medium = localStorage.getItem("utm_medium");
 
      const { last_name, first_name, email, telephone, address, electricity } =
        Object.fromEntries(new FormData(e.currentTarget));
@@ -42,8 +88,8 @@ const ContactHero = () => {
          address: address,
          electricity: electricity,
          utm_campaign: query?.utm_campaign || "",
-         utm_source: query?.utm_source || "",
-          utm_medium: query?.utm_medium || "",
+         utm_source: source ,
+          utm_medium: medium,
        }),
      });
 

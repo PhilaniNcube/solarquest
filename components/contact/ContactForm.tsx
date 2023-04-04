@@ -16,6 +16,9 @@ const ContactForm = () => {
      e.preventDefault();
      setLoading(true)
 
+     const source = localStorage.getItem("utm_source");
+     const medium = localStorage.getItem("utm_medium");
+
 
 
        const {  last_name, first_name, email, telephone, address, electricity } = Object.fromEntries(
@@ -38,8 +41,8 @@ const ContactForm = () => {
           address: address,
           electricity: electricity,
           utm_campaign:query?.utm_campaign || '',
-          utm_source:query?.utm_source || "",
-          utm_medium:query?.utm_medium|| "",
+          utm_source:source ,
+          utm_medium:medium,
          }),
        }
      );

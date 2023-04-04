@@ -12,6 +12,7 @@ import { Package } from "../Types";
 import { NextRequest, NextResponse } from "next/server";
 import { useEffect } from "react";
 
+
 const ProductsPage = ({
   businessPackages,
   residentialPackages,
@@ -38,9 +39,7 @@ const ProductsPage = ({
     //check if we are in the client
     if (typeof window !== "undefined") {
       // get the referrer from the document
-      const referrer = document.referrer;
 
-      console.log("get referrer",referrer);
 
     }
    },[])
