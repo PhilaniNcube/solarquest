@@ -13,7 +13,25 @@ function index() {
     utm_campaign: query.utm_campaign || "",
  })
 
+ const [source, setSource] = useState('')
 
+const getTrafficSource = () => {
+  if(typeof window !== 'undefined') {
+    const referrer = document.referrer
+    if(referrer) {
+      const source = new URL(referrer).hostname
+      return source
+    }
+  }
+  return 'direct'
+}
+
+
+useEffect(() => {
+  const trafficSource = getTrafficSource();
+   setSource(trafficSource)
+  console.log("Traffic source:", source);
+}, []);
 
 
 
@@ -49,7 +67,7 @@ function index() {
                 Independent!
               </p>
               <div
-                onClick={() => router.push(`/contact?utm_source=${!!query.fbclid ? "facebook" : query.utm_source }&utm_medium=${query.utm_medium}&utm_campaign=${query.utm_campaign}`)}
+                onClick={() => router.push(`/contact?utm_source=${!!query.fbclid ? "facebook" : source }&utm_medium=${query.utm_medium}&utm_campaign=${query.utm_campaign}`)}
                 className="flex items-center rounded-lg justify-between bg-red-600 px-4 py-3 w-fit mt-8 hover:bg-gray-600 cursor-pointer duration-200"
               >
                 <button
