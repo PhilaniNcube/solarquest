@@ -13,7 +13,7 @@ import analytics from "../../utils/analytics";
 const Navbar = () => {
 
   const router = useRouter();
-  const query = router.query;
+
 
   const navLinks = [
     {
@@ -38,7 +38,7 @@ const Navbar = () => {
     },
   ]
 
-  console.log({query})
+
 
 
 
