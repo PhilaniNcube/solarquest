@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { Package } from "../../Types";
-import getPackages, { getPackage } from "../../fetchers/packages";
+import  { getPackage } from "../../fetchers/packages";
 import formatter from "../../utils/formatter";
-import ContactForm from "../../components/contact/ContactForm";
+
+import ProductForm from "../../components/contact/ProductForm";
 
 
 type PropTypes = {
@@ -24,8 +25,8 @@ const index = ({product}:PropTypes) => {
           <p className="text-slate-500 text-sm md:text-base tracking-wide leading-7 mt-3">{product.description}</p>
 
           <p className="text-slate-500 text-sm md:text-base tracking-wide leading-7 mt-3">{product.design}</p>
-          <p className="text-slate-700 text-2xl mt-2 font-bold">{formatter(product.price)} <span className="text-xs text-slate-600">incl VAT*</span> </p>
-          <ContactForm />
+          <p className="text-slate-700 text-2xl mt-2 font-bold mb-4">{formatter(product.price)} <span className="text-xs text-slate-600">incl VAT*</span> </p>
+          <ProductForm />
         </div>
         <div className="w-full">
           <h2 className="text-2xl font-bold text-slate-800 uppercase">Features</h2>
