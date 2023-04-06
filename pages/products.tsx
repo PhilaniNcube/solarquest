@@ -1,8 +1,5 @@
 
 import Head from "next/head";
-
-import { useQuery } from "react-query";
-
 import Products from "../components/products/Products";
 import ProductsDivider from "../components/products/ProductsDivider";
 import ProductsHero from "../components/products/ProductsHero";
@@ -10,7 +7,7 @@ import Services from "../components/products/Services";
 import  { getBusiness, getResidential } from "../fetchers/packages";
 import { Package } from "../Types";
 import { NextRequest, NextResponse } from "next/server";
-import { useEffect } from "react";
+import {useQuery} from "@tanstack/react-query";
 
 
 const ProductsPage = ({
@@ -22,29 +19,21 @@ const ProductsPage = ({
   residentialPackages: Package[];
 
 }) => {
-  const businessPackageQuery = useQuery("businessPackages", getBusiness, {
+  const businessPackageQuery = useQuery({
+    queryKey: ["businessPackages"],
+    queryFn: getBusiness,
     initialData: businessPackages,
     refetchOnMount: false,
     refetchOnWindowFocus: false,
   });
 
-  const residentialPackageQuery = useQuery("residentialPackages", getResidential, {
+  const residentialPackageQuery = useQuery({
+    queryKey: ["residentialPackages"],
+    queryFn: getResidential,
     initialData: residentialPackages,
     refetchOnMount: false,
     refetchOnWindowFocus: false,
   });
-
-
-   useEffect(() => {
-    //check if we are in the client
-    if (typeof window !== "undefined") {
-      // get the referrer from the document
-
-
-    }
-   },[])
-
-
 
   return (
     <>

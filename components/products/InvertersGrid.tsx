@@ -1,10 +1,12 @@
-import Image from "next/future/image";
-import { useQuery } from "react-query";
+import Image from "next/image";
+import {useQuery} from "@tanstack/react-query";
 import getInverters from "../../fetchers/inverters";
 
 const InvertersGrid = () => {
 
-  const {isLoading, isSuccess, data} = useQuery('inverters', getInverters, {
+  const {isLoading, isSuccess, data} = useQuery({
+    queryKey: ["inverters"],
+    queryFn: getInverters,
     refetchOnMount: false,
     refetchOnWindowFocus: false,
   })

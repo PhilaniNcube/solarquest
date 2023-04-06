@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Fragment } from "react";
-import Image from 'next/future/image'
+import Image from 'next/image'
 import { motion } from "framer-motion";
 
 const container = {

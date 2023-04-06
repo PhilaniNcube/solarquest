@@ -2,75 +2,65 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import analytics from "../../utils/analytics";
 
-const ContactForm = () => {
+const ProductForm = () => {
+  const [loading, setLoading] = useState(false);
 
-  const [loading, setLoading] = useState(false)
+  const router = useRouter();
 
-   const router = useRouter();
+  const query = router.query;
 
-    const query = router.query;
+  console.log("Query", query);
 
-    console.log("Query", query );
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
 
-   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-     e.preventDefault();
-     setLoading(true)
+    const source = localStorage.getItem("utm_source");
+    const medium = localStorage.getItem("utm_medium");
 
-     const source = localStorage.getItem("utm_source");
-     const medium = localStorage.getItem("utm_medium");
+    const { last_name, first_name, email, telephone, address, electricity } =
+      Object.fromEntries(new FormData(e.currentTarget));
 
+    let request = await fetch(`/api/contact`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`,
+      },
+      body: JSON.stringify({
+        first_name: first_name,
+        last_name: last_name,
+        email: email,
+        telephone: telephone,
+        address: address,
+        electricity: electricity,
+        utm_campaign: query?.utm_campaign || "",
+        utm_source: source,
+        utm_medium: medium,
+      }),
+    });
 
+    let response = await request.json();
 
-       const {  last_name, first_name, email, telephone, address, electricity } = Object.fromEntries(
-         new FormData(e.currentTarget)
-       );
+    console.log({ status: request.status, body: response });
 
-     let request = await fetch(
-       `/api/contact`,
-       {
-         method: "POST",
-         headers: {
-           "Content-Type": "application/json",
-           Authorization: `Bearer ${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`,
-         },
-         body: JSON.stringify({
-           first_name: first_name,
-           last_name: last_name,
-           email: email,
-          telephone: telephone,
-          address: address,
-          electricity: electricity,
-          utm_campaign:query?.utm_campaign || '',
-          utm_source:source ,
-          utm_medium:medium,
-         }),
-       }
-     );
+    if (request.status === 400) {
+      alert(
+        "There was an error processing the request. Please check that you have not already submitted a form before, or that your email address is correct."
+      );
+      setLoading(false);
+      return;
+    }
+    analytics.track("generate_lead", {});
 
-     let response = await request.json()
+    setLoading(false);
 
-     console.log({ status: request.status, body: response });
-
-
-     if (request.status === 400) {
-      alert('There was an error processing the request. Please check that you have not already submitted a form before, or that your email address is correct.')
-      setLoading(false)
-      return
-     }
-       analytics.track("generate_lead", {
-
-       });
-
-     setLoading(false)
-
-     router.push("/thankyou");
-   };
+    router.push("/thankyou");
+  };
 
   return (
     <div>
-      <h2 className="text-xl md:text-3xl mb-4 font-medium text-red-600">
-        Get In Touch
-      </h2>
+
       <p className="text-md text-red-600 font-medium mb-3">
         Our team will be in touch to take you through the process
       </p>
@@ -176,7 +166,7 @@ const ContactForm = () => {
               id="electricity"
               name="electricity"
             >
-              <option  value="">Select a value</option>
+              <option value="">Select a value</option>
               <option value="Less than R1500">Less than R1500</option>
               <option value="R1500-R2500">R1500-R2500</option>
               <option value="R2501-R4500">R2501-R4500</option>
@@ -190,10 +180,10 @@ const ContactForm = () => {
           disabled={loading}
           className="bg-red-600 rounded-lg text-white py-2 px-6 font-bold mt-3"
         >
-          {loading ? 'Loading...' : 'Submit'}
+          {loading ? "Loading..." : "Submit"}
         </button>
       </form>
     </div>
   );
 };
-export default ContactForm;
+export default ProductForm;

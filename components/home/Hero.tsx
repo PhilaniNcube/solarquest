@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import Link from "next/link";
 import { FunctionComponent } from "react";
 import {motion} from 'framer-motion'
@@ -19,13 +19,13 @@ const Hero : FunctionComponent = () => {
           <p className="text-md md:text-lg lg:text-xl text-slate-700 mt-3 font-bold">
             SOLAR AND BACK POWER SOLUTIONS THAT KEEP YOU POWERED AND SAVE YOU
             MONEY!
-
           </p>
 
-          <Link href="/contact">
-            <a className="px-8 py-2 rounded-full bg-red-600 mt-4 text-white text-xl">
-              Learn more
-            </a>
+          <Link
+            href="/contact"
+            className="px-8 py-2 rounded-full bg-red-600 mt-4 text-white text-xl"
+          >
+            Learn more
           </Link>
         </div>
         <motion.div

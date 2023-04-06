@@ -4,5 +4,5 @@ module.exports = {
   images: {
     domains: ["sjvyommxrwhabvkjpwpn.supabase.co"],
   },
-  experimental: { images: { allowFutureImage: true } },
+
 };

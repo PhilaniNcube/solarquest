@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { RiCellphoneLine, RiMailAddLine, RiMapPin2Line, RiPhoneCameraLine, RiPhoneLine } from "react-icons/ri";
@@ -106,7 +106,7 @@ const ContactHero = () => {
          }
 
        analytics.track("generate_lead", {
-         id: response.data?.id,
+
        });
      setLoading(false)
      router.push("/thankyou");

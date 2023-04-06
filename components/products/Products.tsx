@@ -1,7 +1,8 @@
 import {motion} from "framer-motion"
-import Image from "next/future/image";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { Package } from "../../Types";
+
 
 const Products = ({
   residentialPackages,
@@ -24,7 +25,8 @@ const Products = ({
               key={product.id}
               id={product.id}
               layoutId={product.id}
-              className="w-full py-2 rounded-lg"
+              className="w-full py-2 rounded-lg cursor-pointer"
+              onClick={() => router.push(`/products/${product.slug}`)}
             >
               <Image
                 src={product.image}
@@ -63,33 +65,35 @@ const Products = ({
               key={product.id}
               id={product.id}
               layoutId={product.id}
-              className="w-full py-2 rounded-lg"
+              className="w-full py-2 rounded-lg cursor-pointer"
+              onClick={() => router.push(`/products/${product.slug}`)}
             >
-              <Image
-                src={product.image}
-                width={1101}
-                height={895}
-                className="w-full object-cover rounded-lg"
-                alt={product.name}
-              />
-              <div className="mt-3 flex flex-col justify-between px-4">
-                <div>
-                  <p className="text-red-600 font-bold text-2xl mt-3">
-                    {product.name}
-                  </p>
-                  <p className="text-gray-600 font-medium text-sm  mt-1">
-                    {product.solution}
-                  </p>
 
-                  <p className="text-gray-600 font-medium text-sm  mt-1">
-                    {product.design}
-                  </p>
+                  <Image
+                    src={product.image}
+                    width={1101}
+                    height={895}
+                    className="w-full object-cover rounded-lg"
+                    alt={product.name}
+                  />
+                  <div className="mt-3 flex flex-col justify-between px-4">
+                    <div>
+                      <p className="text-red-600 font-bold text-2xl mt-3">
+                        {product.name}
+                      </p>
+                      <p className="text-gray-600 font-medium text-sm  mt-1">
+                        {product.solution}
+                      </p>
 
-                  <p className="text-gray-600 font-medium text-sm  mt-1">
-                    {product.level}
-                  </p>
-                </div>
-              </div>
+                      <p className="text-gray-600 font-medium text-sm  mt-1">
+                        {product.design}
+                      </p>
+
+                      <p className="text-gray-600 font-medium text-sm  mt-1">
+                        {product.level}
+                      </p>
+                    </div>
+                  </div>
             </motion.div>
           ))}
         </div>

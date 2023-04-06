@@ -1,7 +1,7 @@
 
-import { useUser } from "@supabase/auth-helpers-react";
+
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/future/image";
+
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Fragment, useEffect, useState } from "react";
@@ -38,16 +38,9 @@ const Navbar = () => {
     },
   ]
 
-
-
-
-
-  const { isLoading, user, error } = useUser();
-
   const [open, setOpen] = useState(false)
-
-
   const [scrollPosition, setScrollPosition] = useState(0);
+
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
@@ -109,37 +102,14 @@ const Navbar = () => {
               </Link>
             ))}
           </span>
-          {!user ? (
-            <Fragment>
-              <Link href="/contact">
-                <button
-                  onClick={() => analytics.track("Goal - 1")}
-                  className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white"
-                >
-                  Get in touch
-                </button>
-              </Link>
-
-              {/* <Link href="/register">
-                <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
-                  Register
-                </button>
-              </Link> */}
-            </Fragment>
-          ) : (
-            <Fragment>
-              <Link href="/contact">
-                <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
-                  Get in touch
-                </button>
-              </Link>
-              {/* <Link href="/api/auth/logout">
-                <button className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white">
-                  Logout
-                </button>
-              </Link> */}
-            </Fragment>
-          )}
+          <Link href="/contact">
+            <button
+              onClick={() => analytics.track("Goal - 1")}
+              className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white"
+            >
+              Get in touch
+            </button>
+          </Link>
         </div>
       </nav>
       {/* Desktop Nav Ends */}
@@ -158,7 +128,7 @@ const Navbar = () => {
           className="h-8 w-8 text-red-600"
           onClick={() => setOpen(!open)}
         />
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence >
           {open && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -183,32 +153,14 @@ const Navbar = () => {
                 ))}
 
                 <div className="w-full items-center py-4 rounded flex flex-col space-y-4">
-                  {user ? (
-                    <>
-                      <Link href="/contact">
-                        <button
-                          onClick={() => setOpen(false)}
-                          className="ml-4 bg-white rounded-full px-6 font-bold py-2 text-red-600"
-                        >
-                          Get in touch
-                        </button>
-                      </Link>
-                    </>
-                  ) : (
-                    <>
-                      <Link href="/contact">
-                        <button
-                          onClick={() => {
-                            analytics.track("Goal - 1");
-                            setOpen(false);
-                          }}
-                          className="ml-4 bg-white rounded-full px-6 font-bold py-2 text-red-600"
-                        >
-                          Get in touch
-                        </button>
-                      </Link>
-                    </>
-                  )}
+                  <Link href="/contact">
+                    <button
+                      onClick={() => setOpen(false)}
+                      className="ml-4 bg-white rounded-full px-6 font-bold py-2 text-red-600"
+                    >
+                      Get in touch.
+                    </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

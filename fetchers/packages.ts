@@ -13,6 +13,18 @@ let { data: packages, error } = await supabaseClient
 
 }
 
+export const getPackage = async (slug:string) => {
+
+let { data: packages, error } = await supabaseClient
+  .from('packages')
+  .select('*').eq('slug', slug).single()
+
+  if(error) throw error.message
+
+  return packages as Package
+
+}
+
 export default getPackages
 
 

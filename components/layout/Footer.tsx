@@ -9,7 +9,6 @@ const Footer = () => (
           <img className="mb-8" src="/images/logo-lg.png" alt="logo" />
           <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-white">
             <span>
-
               <RiWhatsappLine className="mr-3 h-6 w-6" />
             </span>{" "}
             +27 81 838 1088
@@ -29,17 +28,13 @@ const Footer = () => (
             <h3 className="mb-6 text-lg text-white font-bold">Links</h3>
             <ul className="text-white">
               <li className="mb-3">
-                <Link href="/faq">
-                  <a>Frequently asked questions</a>
-                </Link>
+                <Link href="/faq">Frequently asked questions</Link>
               </li>
               <li className="mb-3">
-                <Link href="/privacy">
-                  <a>Privacy Policy</a>
-                </Link>
+                <Link href="/privacy">Privacy Policy</Link>
               </li>
               <li>
-                <a>Support</a>
+                <Link href="/support">Support</Link>
               </li>
             </ul>
           </div>
@@ -47,19 +42,13 @@ const Footer = () => (
             <h3 className="mb-6 text-lg text-white font-bold">Services</h3>
             <ul className="text-white">
               <li className="mb-3">
-                <Link href="/products">
-                  <a>Products</a>
-                </Link>
+                <Link href="/products">Products</Link>
               </li>
               <li className="mb-3">
-                <Link href="#">
-                  <a>Installations</a>
-                </Link>
+                <Link href="#">Installations</Link>
               </li>
               <li className="mb-3">
-                <Link href="#">
-                  <a>Financing</a>
-                </Link>
+                <Link href="#">Financing</Link>
               </li>
             </ul>
           </div>
@@ -67,19 +56,13 @@ const Footer = () => (
             <h3 className="mb-6 text-lg text-white font-bold">About</h3>
             <ul className="text-white">
               <li className="mb-3">
-                <Link href="/about">
-                  <a>About Us</a>
-                </Link>
+                <Link href="/about">About Us</Link>
               </li>
               <li className="mb-3">
-                <Link href="/about#team">
-                  <a>Team</a>
-                </Link>
+                <Link href="/about#team">Team</Link>
               </li>
               <li className="mb-3">
-                <Link href="/contact">
-                  <a>Contact</a>
-                </Link>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </div>

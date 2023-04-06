@@ -1,8 +1,7 @@
 import { useRouter } from "next/router";
-import React, { useEffect , useState} from "react";
 import analytics from "../../utils/analytics";
-import { NextRequest, NextResponse } from "next/server";
-import { getVisitorSource, getReferrer } from "@analytics/visitor-source";
+
+
 
 function index() {
   const router = useRouter()

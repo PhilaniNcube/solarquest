@@ -36,4 +36,6 @@ export interface Package {
   solution: string;
   design: string;
   level: string;
+  slug: string;
+  price: number;
 }

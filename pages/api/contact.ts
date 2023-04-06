@@ -18,17 +18,17 @@ export default async function handler(
 
  console.log({first_name, last_name, email, address, telephone, electricity, utm_source, utm_campaign, utm_medium} )
 
- const { data, error } = await supabaseClient
-  .from('leads')
-  .insert([
-    { first_name: first_name, last_name: last_name, email: email, address: address, telephone: telephone, electricity: electricity},
-  ]).single()
+//  const { data, error } = await supabaseClient
+//   .from('leads')
+//   .insert([
+//     { first_name: first_name, last_name: last_name, email: email, address: address, telephone: telephone, electricity: electricity},
+//   ]).single()
 
 
-  if (error) {
-    res.status(400).json({message: error.details, error: error})
-    return
-  }
+//   if (error) {
+//     res.status(400).json({message: error.details, error: error})
+//     return
+//   }
 
 
  const request = await fetch(`https://solarquest2.pipedrive.com/api/v1/persons?api_token=${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`, {
@@ -80,5 +80,5 @@ export default async function handler(
 
 
 
-  res.status(200).json({message: 'All Good!', data: data, lead: leadResponse})
+  res.status(200).json({message: 'All Good!', lead: leadResponse})
 }
