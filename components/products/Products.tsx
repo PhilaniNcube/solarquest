@@ -59,7 +59,7 @@ const Products = ({
         <h2 className="text-center mt-16 text-3xl md:text-4xl text-red-600 font-bold">
           VALUE LINE
         </h2>
-        <div className="mb-20 grid grid-cols-1 md:grid-cols-2  gap-x-6 gap-y-12">
+        <div className="mt-12 mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
           {businessPackages.map((product) => (
             <motion.div
               key={product.id}
