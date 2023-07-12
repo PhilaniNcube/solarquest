@@ -73,6 +73,35 @@ export default async function handler(
   })
  })
 
+
+  const url = new URL(`https://graph.facebook.com/v16.0/3500554073544736/events?access_token=${process.env.FB_ACCESS_TOKEN}`)
+
+ const crmResponse = await fetch(url, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    "data": [
+      {
+        "event_name": "Lead",
+        "event_time": Date.now(),
+        "action_source": "system_generated",
+        "user_data": {
+          "lead_id":personId,
+        },
+        "custom_data": {
+          "lead_event_source": "Pipedrive",
+          "event_source": "crm",
+
+        }
+      }
+    ]
+  })
+ } )
+
+ console.log(await crmResponse.json())
+
  let leadResponse = await leadRequest.json()
 
 
