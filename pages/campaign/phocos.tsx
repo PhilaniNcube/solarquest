@@ -68,6 +68,8 @@ export async function getStaticProps() {
   const residentialPackages = await getResidential();
 
 
+
+
   return {
     props: {
       residentialPackages,

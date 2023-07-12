@@ -46,9 +46,6 @@ export default async function handler(
     address: address,
     electricity: electricity,
     }
-
-
-
   })
  })
 
@@ -77,6 +74,8 @@ export default async function handler(
  })
 
  let leadResponse = await leadRequest.json()
+
+
 
 
 
