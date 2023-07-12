@@ -34,7 +34,8 @@ export default async function handler(
         },
         "custom_data": {
           "lead_event_source": "Pipedrive",
-          "event_source": "crm"
+          "event_source": "crm",
+          "event": event
         }
       }
     ]
