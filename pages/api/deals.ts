@@ -50,6 +50,7 @@ export default async function handler(
   res.setHeader( 'Content-Type', 'application/json' )
   res.setHeader( 'status', '200' )
 
+
   res.headersSent
 
   res.status(200).json({message: 'All Good!', lead: leadResponse})
