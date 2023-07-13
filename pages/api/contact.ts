@@ -19,6 +19,7 @@ export default async function handler(
  const ip = req.headers.ip
  const userAgent = req.headers['user-agent']
 
+
  console.log({first_name, last_name, email, address, telephone, electricity, utm_source, utm_campaign, utm_medium} )
 
 //  const { data, error } = await supabaseClient
@@ -100,9 +101,9 @@ export default async function handler(
           "event_source": "crm",
 
         },
-        "test_event_code": "TEST27243",
+
       }
-    ]
+    ],"test_event_code": "TEST27243",
   })
  } )
 

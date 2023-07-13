@@ -40,9 +40,10 @@ export default async function handler(
           "event_source": "crm",
           "event": event
         },
-        "test_event_code": "TEST27243",
+
       }
-    ]
+    ],
+    "test_event_code": "TEST27243",
   })
  } )
 
