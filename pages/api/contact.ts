@@ -78,36 +78,36 @@ export default async function handler(
  })
 
 
-  const url = new URL(`https://graph.facebook.com/v17.0/3500554073544736/events?access_token=${process.env.FB_ACCESS_TOKEN}`)
+//   const url = new URL(`https://graph.facebook.com/v17.0/3500554073544736/events?access_token=${process.env.FB_ACCESS_TOKEN}`)
 
- const crmResponse = await fetch(url, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-   "data": [
-      {
-        "event_name": "Lead",
-        "event_time": Date.now(),
-        "action_source": "system_generated",
-        "user_data": {
-          // "lead_id": meta.id,
-          "client_ip_address": ip,
-          "client_user_agent": userAgent,
-        },
-        "custom_data": {
-          "lead_event_source": "Pipedrive",
-          "event_source": "crm",
+//  const crmResponse = await fetch(url, {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+//   body: JSON.stringify({
+//    "data": [
+//       {
+//         "event_name": "Lead",
+//         "event_time": Date.now(),
+//         "action_source": "system_generated",
+//         "user_data": {
+//           // "lead_id": meta.id,
+//           "client_ip_address": ip,
+//           "client_user_agent": userAgent,
+//         },
+//         "custom_data": {
+//           "lead_event_source": "Pipedrive",
+//           "event_source": "crm",
 
-        },
+//         },
 
-      }
-    ],"test_event_code": "TEST27243",
-  })
- } )
+//       }
+//     ],"test_event_code": "TEST27243",
+//   })
+//  } )
 
- console.log(await crmResponse.json())
+//  console.log(await crmResponse.json())
 
  let leadResponse = await leadRequest.json()
 
