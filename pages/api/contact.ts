@@ -74,7 +74,7 @@ export default async function handler(
  })
 
 
-  const url = new URL(`https://graph.facebook.com/v16.0/3500554073544736/events?access_token=${process.env.FB_ACCESS_TOKEN}`)
+  const url = new URL(`https://graph.facebook.com/v17.0/3500554073544736/events?access_token=${process.env.FB_ACCESS_TOKEN}`)
 
  const crmResponse = await fetch(url, {
   method: 'POST',

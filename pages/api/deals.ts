@@ -16,6 +16,8 @@ export default async function handler(
 
  const {v, matches_filters, meta, event } = req.body
 
+ console.log({v, matches_filters, meta, event })
+
  const url = new URL(`https://graph.facebook.com/v16.0/3500554073544736/events?access_token=${process.env.FB_ACCESS_TOKEN}`)
 
  const response = await fetch(url, {
@@ -44,8 +46,8 @@ export default async function handler(
 
 
 
-
-  const leadResponse = await response.json()
+ const leadResponse = await response.json()
+ console.log({leadResponse})
 
   res.setHeader( 'Content-Type', 'application/json' )
   res.setHeader( 'status', '200' )
