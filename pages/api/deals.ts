@@ -18,7 +18,7 @@ export default async function handler(
 
  console.log({v, matches_filters, meta, event })
 
- const url = new URL(`https://graph.facebook.com/v16.0/3500554073544736/events?access_token=${process.env.FB_ACCESS_TOKEN}`)
+ const url = new URL(`https://graph.facebook.com/v17.0/3500554073544736/events?access_token=${process.env.FB_ACCESS_TOKEN}`)
 
  const response = await fetch(url, {
   method: 'POST',
@@ -32,13 +32,15 @@ export default async function handler(
         "event_time": Date.now(),
         "action_source": "system_generated",
         "user_data": {
-          "lead_id": meta.id,
+          // "lead_id": meta.id,
+          "client_ip_address": meta.remote_ip,
         },
         "custom_data": {
           "lead_event_source": "Pipedrive",
           "event_source": "crm",
           "event": event
-        }
+        },
+        "test_event_code": "TEST27243",
       }
     ]
   })

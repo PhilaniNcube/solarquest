@@ -16,6 +16,9 @@ export default async function handler(
 
  const {first_name, last_name, email, address, telephone, electricity, utm_source, utm_campaign, utm_medium} = req.body
 
+ const ip = req.headers.ip
+ const userAgent = req.headers['user-agent']
+
  console.log({first_name, last_name, email, address, telephone, electricity, utm_source, utm_campaign, utm_medium} )
 
 //  const { data, error } = await supabaseClient
@@ -82,19 +85,22 @@ export default async function handler(
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-    "data": [
+   "data": [
       {
         "event_name": "Lead",
         "event_time": Date.now(),
         "action_source": "system_generated",
         "user_data": {
-          "lead_id":personId,
+          // "lead_id": meta.id,
+          "client_ip_address": ip,
+          "client_user_agent": userAgent,
         },
         "custom_data": {
           "lead_event_source": "Pipedrive",
           "event_source": "crm",
 
-        }
+        },
+        "test_event_code": "TEST27243",
       }
     ]
   })
