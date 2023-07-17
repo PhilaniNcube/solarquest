@@ -107,7 +107,7 @@ const Navbar = () => {
               onClick={() => analytics.track("Goal - 1")}
               className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white"
             >
-              Get in touch
+          Get Quote
             </button>
           </Link>
         </div>
@@ -158,7 +158,7 @@ const Navbar = () => {
                       onClick={() => setOpen(false)}
                       className="ml-4 bg-white rounded-full px-6 font-bold py-2 text-red-600"
                     >
-                      Get in touch.
+                      Get Quote
                     </button>
                   </Link>
                 </div>
