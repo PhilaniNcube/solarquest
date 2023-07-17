@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FunctionComponent } from "react";
 import {motion} from 'framer-motion'
+import ContactForm from "../contact/ContactForm";
 
 const Hero : FunctionComponent = () => {
   return (
@@ -28,7 +29,11 @@ const Hero : FunctionComponent = () => {
             Learn more
           </Link>
         </div>
-        <motion.div
+        <div className="relative isolate">
+          <div className="absolute inset-0 z-50 bg-white/80">
+            <ContactForm />
+          </div>
+        {/* <motion.div
           initial={{ opacity: 0, x: 200 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.55, delay: 0.7 }}
@@ -43,7 +48,8 @@ const Hero : FunctionComponent = () => {
             quality={100}
             className="rounded-lg h-[95%] my-auto w-10/12 mx-auto object-cover "
           />
-        </motion.div>
+        </motion.div> */}
+        </div>
       </div>
     </header>
   );

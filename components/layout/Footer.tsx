@@ -33,9 +33,9 @@ const Footer = () => (
               <li className="mb-3">
                 <Link href="/privacy">Privacy Policy</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/support">Support</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="lg:pr-24 pb-12 lg:pb-0">
@@ -44,12 +44,12 @@ const Footer = () => (
               <li className="mb-3">
                 <Link href="/products">Products</Link>
               </li>
-              <li className="mb-3">
+              {/* <li className="mb-3">
                 <Link href="#">Installations</Link>
-              </li>
-              <li className="mb-3">
+              </li> */}
+              {/* <li className="mb-3">
                 <Link href="#">Financing</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div>
