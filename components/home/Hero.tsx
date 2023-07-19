@@ -30,7 +30,7 @@ const Hero : FunctionComponent = () => {
           </Link>
         </div>
         <div className="relative isolate">
-          <div className="absolute inset-0 z-50 bg-white/80">
+          <div className=" z-50 bg-white/80">
             <ContactForm />
           </div>
         {/* <motion.div
