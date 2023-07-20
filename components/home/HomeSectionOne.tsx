@@ -15,7 +15,7 @@ const HomeSectionOne: FunctionComponent = () => {
           className="w-full isolated py-24 h-full relative before:content-[''] before:absolute before:bottom-20 before:right-10 before:h-56 before:w-56 before:-z-10 before:rotate-45 before:bg-slate-300/30 before:rounded-lg before:shadow-2xl after:content-[''] after:absolute after:top-10 after:left-10 after:h-56 after:w-56 after:-z-10 after:rotate-45 after:bg-red-300/30 after:rounded-full after:shadow-xl"
         >
           <h2 className="text-lg md:text-3xl lg:text-4xl text-red-600 font-extrabold absolute top-10 left-0 max-w-[50ch]">
-            Phocos winter promotion. Starting at <br />
+            Phocos Winter Promotion. Starting at <br />
             <span className="font-serif text-2xl md:text-3xl lg:text-4xl bg-red-600/90 text-white mt-1 lg:mt-3 text-center inline-block skew-x-12 px-3 py-2">
               R59,995
             </span>
