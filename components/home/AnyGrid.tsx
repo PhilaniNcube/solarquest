@@ -16,6 +16,9 @@ const AnyGrid = () => {
             <h2 className="text-white font-bold text-[1.5rem] md:text-3xl lg:text-4xl leading-10">
               Say Goodbye to Load Shedding & Save Money While You Do It
             </h2>
+             <h2 className="text-white font-extrabold text-[1.5rem] md:text-3xl lg:text-4xl leading-10">
+              FINANCING OPTIONS AVAILABLE
+            </h2>
           </div>
           <Image
             src="/images/logo-lg.png"
