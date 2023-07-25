@@ -21,7 +21,9 @@ const Hero : FunctionComponent = () => {
             SOLAR AND BACK POWER SOLUTIONS THAT KEEP YOU POWERED AND SAVE YOU
             MONEY!
           </p>
-
+           <p className="text-md md:text-lg lg:text-xl text-slate-700 mt-3 font-extrabold">
+            FINANCING OPTIONS AVAILABLE
+          </p>
           <Link
             href="/contact"
             className="px-8 py-2 rounded-full bg-red-600 mt-4 text-white text-xl"
