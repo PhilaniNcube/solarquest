@@ -10,6 +10,7 @@ import HomeSectionThree from '../components/home/HomeSectionThree'
 import {NextRequest} from 'next/server'
 import RebelDuo from '../components/home/RebelDuo'
 import Solutions from '../components/home/Solutions'
+import Banner from '../components/home/Banner'
 
 const Home: NextPage = () => {
 
@@ -47,6 +48,7 @@ const Home: NextPage = () => {
           content="solar pwer solutions; solar services; solar panels; solar system design; lithium batteries; solar inverters; lithium ion battery; solar power; solar panel installation; solar inverter price; off grid; solar panel inverter; solar power panels; solar energy solutions; hybrid inverter; voltage switcher; ac combiner box; dc combiner box; solar installer; pv cable; solar cable; solar support; solar repairs; solar training; balance of systems "
         />
       </Head>
+      <Banner />
       <Hero />
       <HomeSectionOne />
       {/* <RebelDuo /> */}
