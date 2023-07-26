@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -37,16 +38,18 @@ const Banner = () => {
               alt="Phocos Any Grid"
               className="w-full hidden md:inline-block  object-cover"
             />
-            <div className="col-span-1 lg:col-span-2 flex flex-col justify-center items-start md:pr-12">
-              <h2 className="text-white text-center font-bold text-[1.5rem] md:text-3xl leading-10">
+            <div className="col-span-1 lg:col-span-2 flex flex-col justify-center items-center text-center md:pr-12">
+              <h2 className="text-white text-center font-bold text-sm sm:text-[1.5rem] md:text-3xl mt-8 md:mt-0 md:leading-10">
                 Winter Promotion <br />
-                <span className="text-2xl font-extrabold md:text-3xl lg:text-5xl">
+                <span className="text-lg font-extrabold md:text-3xl lg:text-5xl">
                   {" "}
                   Up to 30% off Phocos Any Grid Systems
                 </span>{" "}
                 <br />
                 The Most Advanced True Hybrid Inverter Ever Built!
               </h2>
+
+              <Link href="/contact" className="px-6 py-2 rounded-full bg-red-600 text-white mt-6 font-bold text-lg">Get Quote</Link>
             </div>
           </div>
         </div>
