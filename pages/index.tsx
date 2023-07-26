@@ -52,7 +52,7 @@ const Home: NextPage = () => {
       <Hero />
       <HomeSectionOne />
       {/* <RebelDuo /> */}
-      <AnyGrid />
+      {/* <AnyGrid /> */}
       {/**<Solutions /> */}
       <HomeSectionThree />
       <HomeSectionFour />
