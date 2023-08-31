@@ -14,6 +14,15 @@ export default function Partners() {
           <div className="flex justify-around items-center flex-wrap  mx-auto gap-6 w-full">
             <div className="md:w-48 w-full h-32 bg-gray-50 flex items-center justify-center">
               <Image
+                src="/images/solaredge_logo.webp"
+                width={688}
+                height={321}
+                alt="Arco"
+                className="w-full object-cover grayscale"
+              />
+            </div>
+            <div className="md:w-48 w-full h-32 bg-gray-50 flex items-center justify-center">
+              <Image
                 src="/images/arco.jpg"
                 width={688}
                 height={321}

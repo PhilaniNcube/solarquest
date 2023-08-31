@@ -26,11 +26,11 @@ const Navbar = () => {
       href: '/about',
       active: router.asPath === '/about'
     },
-    {
-      link: 'Products',
-      href: '/products',
-      active: router.asPath === '/products'
-    },
+    // {
+    //   link: 'Products',
+    //   href: '/products',
+    //   active: router.asPath === '/products'
+    // },
     {
       link: 'Contact',
       href: '/contact',

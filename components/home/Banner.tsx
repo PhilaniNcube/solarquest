@@ -32,24 +32,31 @@ const Banner = () => {
         <div className=" px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <Image
-              src="/images/phocos-any-grid.png"
+              src="/images/ultr5_logo_transparent.webp"
               width={1122}
               height={1467}
               alt="Phocos Any Grid"
               className="w-full hidden md:inline-block  object-cover"
             />
             <div className="col-span-1 lg:col-span-2 flex flex-col justify-center items-center  text-center md:pr-6">
-              <h2 className="text-white text-center font-bold text-sm sm:text-[1.5rem]  mt-8 md:mt-0 md:leading-10">
-                Winter Promotion <br />
+              <h1 className="text-white text-center font-bold text-sm sm:text-[1.5rem]  mt-8 md:mt-0 md:leading-10">
+                Introducing the Future of Power <br />
                 <span className="text-lg font-extrabold md:text-3xl lg:text-5xl">
                   {" "}
-                  Up to 30% off Phocos Any Grid Systems
+                  Unleash Limitless Energy with Our All-New ULTR 5 Lithium
+                  Battery!
                 </span>{" "}
                 <br />
-                The Most Advanced True Hybrid Inverter Ever Built!
-              </h2>
+                Experience 6000 cycles and a decade of unstoppable energy,
+                backed by a 10-year warranty.
+              </h1>
 
-              <Link href="/contact" className="px-6 py-2 rounded-full bg-red-600 text-white mt-6 font-bold  text-lg">Get Quote</Link>
+              <Link
+                href="/contact"
+                className="px-6 py-2 rounded-full bg-red-600 text-white mt-6 font-bold  text-lg"
+              >
+                Get Quote
+              </Link>
             </div>
           </div>
         </div>

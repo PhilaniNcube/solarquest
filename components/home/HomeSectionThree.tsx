@@ -18,12 +18,12 @@ const HomeSectionThree = () => {
             also save you money on your electricity bill, so it is a good
             investment especially in these times.
           </p>
-          <Link
+          {/* <Link
             href="/products"
             className="px-4 md:px-6 border border-red-400 text-red-600 font-bold rounded-full py-2 mt-3"
           >
             Our Products
-          </Link>
+          </Link> */}
         </div>
         <div className="w-full h-full">
           <Image

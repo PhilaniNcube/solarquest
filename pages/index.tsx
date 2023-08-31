@@ -69,8 +69,8 @@ const referrer = req.referrer
 console.log(`getServerSideProps`, referrer)
 
 return {
-props: {
-  data: ""
-}
-}
+    props: {
+      data: ""
+    }
+  }
 }

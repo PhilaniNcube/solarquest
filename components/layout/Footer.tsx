@@ -39,11 +39,11 @@ const Footer = () => (
             </ul>
           </div>
           <div className="lg:pr-24 pb-12 lg:pb-0">
-            <h3 className="mb-6 text-lg text-white font-bold">Services</h3>
+            {/* <h3 className="mb-6 text-lg text-white font-bold">Services</h3> */}
             <ul className="text-white">
-              <li className="mb-3">
+              {/* <li className="mb-3">
                 <Link href="/products">Products</Link>
-              </li>
+              </li> */}
               {/* <li className="mb-3">
                 <Link href="#">Installations</Link>
               </li> */}
