@@ -21,11 +21,11 @@ const ProductForm = () => {
     const { last_name, first_name, email, telephone, address, electricity } =
       Object.fromEntries(new FormData(e.currentTarget));
 
-    let request = await fetch(`/api/contact`, {
+    const request = await fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`,
+        // Authorization: `Bearer ${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`,
       },
       body: JSON.stringify({
         first_name: first_name,
@@ -34,13 +34,10 @@ const ProductForm = () => {
         telephone: telephone,
         address: address,
         electricity: electricity,
-        utm_campaign: query?.utm_campaign || "",
-        utm_source: source,
-        utm_medium: medium,
       }),
     });
 
-    let response = await request.json();
+    const response = await request.json();
 
     console.log({ status: request.status, body: response });
 
@@ -61,20 +58,20 @@ const ProductForm = () => {
   return (
     <div>
 
-      <p className="text-md text-red-600 font-medium mb-3">
+      <p className="mb-3 font-medium text-red-600 text-md">
         Our team will be in touch to take you through the process
       </p>
       <form className="w-full" onSubmit={handleSubmit}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
           <div className="flex flex-col">
             <label
-              className="placeholder:text-slate-700 text-sm font-medium"
+              className="text-sm font-medium placeholder:text-slate-700"
               htmlFor="first_name"
             >
               First Name
             </label>
             <input
-              className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+              className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
               type="text"
               placeholder="First Name"
               required
@@ -84,13 +81,13 @@ const ProductForm = () => {
           </div>
           <div className="flex flex-col">
             <label
-              className="placeholder:text-slate-700 text-sm font-medium"
+              className="text-sm font-medium placeholder:text-slate-700"
               htmlFor="last_name"
             >
               Last Name
             </label>
             <input
-              className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+              className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
               type="text"
               placeholder="Last Name"
               required
@@ -99,16 +96,16 @@ const ProductForm = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+        <div className="grid grid-cols-1 gap-3 mt-4 md:grid-cols-2">
           <div className="flex flex-col">
             <label
-              className="placeholder:text-slate-700 text-sm font-medium"
+              className="text-sm font-medium placeholder:text-slate-700"
               htmlFor="email"
             >
               Email
             </label>
             <input
-              className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+              className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
               type="email"
               placeholder="Email Address"
               required
@@ -118,13 +115,13 @@ const ProductForm = () => {
           </div>
           <div className="flex flex-col">
             <label
-              className="placeholder:text-slate-700 text-sm font-medium"
+              className="text-sm font-medium placeholder:text-slate-700"
               htmlFor="telephone"
             >
               Contact Number
             </label>
             <input
-              className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+              className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
               type="tel"
               placeholder="Phone Number"
               required
@@ -136,13 +133,13 @@ const ProductForm = () => {
 
         <div className="flex flex-col mt-4">
           <label
-            className="placeholder:text-slate-700 text-sm font-medium"
+            className="text-sm font-medium placeholder:text-slate-700"
             htmlFor="address"
           >
             Address
           </label>
           <input
-            className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+            className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
             type="text"
             placeholder="Address"
             required
@@ -151,16 +148,16 @@ const ProductForm = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+        <div className="grid grid-cols-1 gap-3 mt-4 md:grid-cols-2">
           <div className="flex flex-col">
             <label
-              className="placeholder:text-slate-700 text-sm font-medium "
+              className="text-sm font-medium placeholder:text-slate-700 "
               htmlFor="electricity"
             >
               What is your current electricity bill?
             </label>
             <select
-              className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
+              className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
               placeholder="Phone Number"
               required
               id="electricity"
@@ -178,7 +175,7 @@ const ProductForm = () => {
         <button
           type="submit"
           disabled={loading}
-          className="bg-red-600 rounded-lg text-white py-2 px-6 font-bold mt-3"
+          className="px-6 py-2 mt-3 font-bold text-white bg-red-600 rounded-lg"
         >
           {loading ? "Loading..." : "Submit"}
         </button>

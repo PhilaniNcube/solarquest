@@ -66,7 +66,7 @@ export default Home
 export async function getServerSideProps(req: NextRequest) {
 
 const referrer = req.referrer
-console.log(`getServerSideProps`, referrer)
+
 
 return {
     props: {
