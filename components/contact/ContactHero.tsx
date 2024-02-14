@@ -44,12 +44,7 @@ const ContactHero = () => {
       }
     };
 
-   useEffect(() => {
-    // check if we are on the client
-    if (typeof window !== "undefined") {
-      setSource();
-    }
-   },[])
+
 
 
 
@@ -65,7 +60,7 @@ const ContactHero = () => {
      const { last_name, first_name, email, telephone, address, electricity } =
        Object.fromEntries(new FormData(e.currentTarget));
 
-     let request = await fetch(`/api/contact`, {
+     const request = await fetch("/api/contact", {
        method: "POST",
        headers: {
          "Content-Type": "application/json",
@@ -78,13 +73,11 @@ const ContactHero = () => {
          telephone: telephone,
          address: address,
          electricity: electricity,
-         utm_campaign: query?.utm_campaign || "",
-         utm_source: source ,
-          utm_medium: medium,
+
        }),
      });
 
-     let response = await request.json();
+     const response = await request.json();
 
      console.log({status: response.status, message: response.message});
 
@@ -104,178 +97,209 @@ const ContactHero = () => {
    };
 
   return (
-    <section className="relative">
-      <div className="mx-auto max-w-7xl px-4 lg:px-0 my-16 py-8 md:py-16 grid grid-cols-1 gap-6 md:grid-cols-2">
-        <div className="flex flex-col justify-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-red-600">
-            Get in touch
-          </h1>
-          <p className="font-medium mt-4 text-xl md:text-2xl text-gray-600">
-            Projects should serve a purpose beyond meeting objectives, they must
-            be long-lasting, impactful and sustainable for future generations.
-          </p>
-          {/* <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
+			<section className="relative">
+				<div className="grid grid-cols-1 gap-6 px-4 py-8 mx-auto my-16 max-w-7xl lg:px-0 md:py-16 md:grid-cols-2">
+					<div className="flex flex-col justify-center">
+						<h1 className="text-3xl font-bold text-red-600 md:text-5xl">
+							Get in touch
+						</h1>
+						<p className="mt-4 text-xl font-medium text-gray-600 md:text-2xl">
+							Projects should serve a purpose beyond meeting objectives, they
+							must be long-lasting, impactful and sustainable for future
+							generations.
+						</p>
+						{/* <article className="flex items-start mt-4 text-lg font-medium text-gray-600 md:text-xl">
             <span>
-              <RiMapPin2Line className="mr-3 h-6 w-6" />
+              <RiMapPin2Line className="w-6 h-6 mr-3" />
             </span>{" "}
             9 Kramer Road, Kramerville, <br />
             Sandton, Johannesburg
           </article> */}
 
-          {/* <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
+						{/* <article className="flex items-start mt-4 text-lg font-medium text-gray-600 md:text-xl">
             <span>
-              <RiPhoneLine className="mr-3 h-6 w-6" />
+              <RiPhoneLine className="w-6 h-6 mr-3" />
             </span>{" "}
             +27 10 055 3151
           </article> */}
-          <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
-            <span>
-              <RiMapPin2Line className="mr-3 h-6 w-6" />
-            </span>{" "}
-            Unit 3 Northgate Business Park, Brooklyn, <br />
-            Cape Town, 7405
-          </article>
+						<article className="flex items-start mt-4 text-lg font-medium text-gray-600 md:text-xl">
+							<span>
+								<RiMapPin2Line className="w-6 h-6 mr-3" />
+							</span>{" "}
+							Unit 3 Northgate Business Park, Brooklyn, <br />
+							Cape Town, 7405
+						</article>
 
-          <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
-            <span>
-              <RiPhoneLine className="mr-3 h-6 w-6" />
-            </span>{" "}
-            +27 21 023 2475
-          </article>
-          <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
-            <span>
-              <RiCellphoneLine className="mr-3 h-6 w-6" />
-            </span>{" "}
-            +27 81 838 1088
-          </article>
-          <article className="font-medium flex items-start mt-4 text-lg md:text-xl text-gray-600">
-            <span>
-              <RiMailAddLine className="mr-3 h-6 w-6" />
-            </span>{" "}
-            info@solarquest.co.za
-          </article>
-        </div>
-        <div className="flex flex-col justify-center">
-          <form className="w-full" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <div className="flex flex-col">
-                <label
-                  className="text-gray-600 text-sm font-medium"
-                  htmlFor="first_name"
-                >
-                  First Name
-                </label>
-                <input
-                  className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
-                  type="text"
-                  placeholder="First Name"
-                  required
-                  id="first_name"
-                  name="first_name"
-                />
-              </div>
-              <div className="flex flex-col">
-                <label
-                  className="placeholder:text-slate-700 text-sm font-medium"
-                  htmlFor="last_name"
-                >
-                  Last Name
-                </label>
-                <input
-                  className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
-                  type="text"
-                  placeholder="Last Name"
-                  required
-                  id="last_name"
-                  name="last_name"
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
-              <div className="flex flex-col">
-                <label
-                  className="placeholder:text-slate-700 text-sm font-medium"
-                  htmlFor="email"
-                >
-                  Email
-                </label>
-                <input
-                  className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
-                  type="email"
-                  placeholder="Email Address"
-                  required
-                  id="email"
-                  name="email"
-                />
-              </div>
-              <div className="flex flex-col">
-                <label
-                  className="placeholder:text-slate-700 text-sm font-medium"
-                  htmlFor="telephone"
-                >
-                  Contact Number
-                </label>
-                <input
-                  className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
-                  type="tel"
-                  placeholder="Phone Number"
-                  required
-                  id="telephone"
-                  name="telephone"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col mt-4">
-              <label
-                className="placeholder:text-slate-700 text-sm font-medium"
-                htmlFor="address"
-              >
-                Address
-              </label>
-              <input
-                className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
-                type="text"
-                placeholder="Address"
-                required
-                id="address"
-                name="address"
-              />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
-              <div className="flex flex-col">
-                <label
-                  className="placeholder:text-slate-700 text-sm font-medium "
-                  htmlFor="electricity"
-                >
-                  What is your current electricity bill?
-                </label>
-                <select
-                  className="px-4 py-2 placeholder:text-slate-700 text-sm border border-gray-200 rounded-md"
-                  placeholder="Phone Number"
-                  required
-                  id="electricity"
-                  name="electricity"
-                >
-                  <option value="">Select a value</option>
-                  <option value="Less than R1500">Less than R1500</option>
-                  <option value="R1500-R2500">R1500-R2500</option>
-                  <option value="R2501-R4500">R2501-R4500</option>
-                  <option value="Greater than R4500">Greater than R4500</option>
-                </select>
-              </div>
-            </div>
+						<article className="flex items-start mt-4 text-lg font-medium text-gray-600 md:text-xl">
+							<span>
+								<RiPhoneLine className="w-6 h-6 mr-3" />
+							</span>{" "}
+							+27 21 023 2475
+						</article>
+						<article className="flex items-start mt-4 text-lg font-medium text-gray-600 md:text-xl">
+							<span>
+								<RiCellphoneLine className="w-6 h-6 mr-3" />
+							</span>{" "}
+							+27 81 838 1088
+						</article>
+						<article className="flex items-start mt-4 text-lg font-medium text-gray-600 md:text-xl">
+							<span>
+								<RiMailAddLine className="w-6 h-6 mr-3" />
+							</span>{" "}
+							info@solarquest.co.za
+						</article>
+					</div>
+					<div className="flex flex-col justify-center">
+						<form
+							className="w-full"
+							// onSubmit={handleSubmit}
+							action="https://api.web3forms.com/submit"
+							method="POST"
+						>
+							<input
+								type="hidden"
+								name="access_key"
+								value={`${process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY}`}
+							/>
+							<input
+								type="hidden"
+								name="subject"
+								value="New submission from Solarquest"
+							/>
+							<input
+								type="hidden"
+								name="redirect"
+								value="https://solarquest.co.za/thankyou"
+							/>
+							<input
+								type="checkbox"
+								className="hidden"
+								name="botcheck"
+								style={{ display: "none" }}
+							/>
+							<input type="hidden" name="from_name" value="Solarquest" />
+							{/* <input type="hidden" name="ccemail" value="ncbphi001@gmail.com" /> */}
+							<div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+								<div className="flex flex-col">
+									<label
+										className="text-sm font-medium text-gray-600"
+										htmlFor="first_name"
+									>
+										First Name
+									</label>
+									<input
+										className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
+										type="text"
+										placeholder="First Name"
+										required
+										id="first_name"
+										name="first_name"
+									/>
+								</div>
+								<div className="flex flex-col">
+									<label
+										className="text-sm font-medium placeholder:text-slate-700"
+										htmlFor="last_name"
+									>
+										Last Name
+									</label>
+									<input
+										className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
+										type="text"
+										placeholder="Last Name"
+										required
+										id="last_name"
+										name="last_name"
+									/>
+								</div>
+							</div>
+							<div className="grid grid-cols-1 gap-3 mt-4 md:grid-cols-2">
+								<div className="flex flex-col">
+									<label
+										className="text-sm font-medium placeholder:text-slate-700"
+										htmlFor="email"
+									>
+										Email
+									</label>
+									<input
+										className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
+										type="email"
+										placeholder="Email Address"
+										required
+										id="email"
+										name="email"
+									/>
+								</div>
+								<div className="flex flex-col">
+									<label
+										className="text-sm font-medium placeholder:text-slate-700"
+										htmlFor="telephone"
+									>
+										Contact Number
+									</label>
+									<input
+										className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
+										type="tel"
+										placeholder="Phone Number"
+										required
+										id="telephone"
+										name="telephone"
+									/>
+								</div>
+							</div>
+							<div className="flex flex-col mt-4">
+								<label
+									className="text-sm font-medium placeholder:text-slate-700"
+									htmlFor="address"
+								>
+									Address
+								</label>
+								<input
+									className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
+									type="text"
+									placeholder="Address"
+									required
+									id="address"
+									name="address"
+								/>
+							</div>
+							<div className="grid grid-cols-1 gap-3 mt-4 md:grid-cols-2">
+								<div className="flex flex-col">
+									<label
+										className="text-sm font-medium placeholder:text-slate-700 "
+										htmlFor="electricity"
+									>
+										What is your current electricity bill?
+									</label>
+									<select
+										className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
+										placeholder="Phone Number"
+										required
+										id="electricity"
+										name="electricity"
+									>
+										<option value="">Select a value</option>
+										<option value="Less than R1500">Less than R1500</option>
+										<option value="R1500-R2500">R1500-R2500</option>
+										<option value="R2501-R4500">R2501-R4500</option>
+										<option value="Greater than R4500">
+											Greater than R4500
+										</option>
+									</select>
+								</div>
+							</div>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="bg-red-600 rounded-md text-white py-2 px-6 font-bold mt-3"
-            >
-              {loading ? 'Loading...': 'Submit'}
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-  );
+							<button
+								type="submit"
+								disabled={loading}
+								className="px-6 py-2 mt-3 font-bold text-white bg-red-600 rounded-md"
+							>
+								{loading ? "Loading..." : "Submit"}
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		);
 };
 export default ContactHero;
