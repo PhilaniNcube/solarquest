@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 import analytics from "../../utils/analytics";
 
 const ProductForm = () => {
