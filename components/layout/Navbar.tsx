@@ -46,6 +46,7 @@ const Navbar = () => {
     setScrollPosition(position);
   };
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
@@ -65,7 +66,7 @@ const Navbar = () => {
       }`}
     >
       {/* Desktop Nav Starts */}
-      <nav className="max-w-7xl mx-auto px-4 py-3 hidden md:flex items-center justify-between bg-transparent text-white">
+      <nav className="items-center justify-between hidden px-4 py-3 mx-auto text-white bg-transparent max-w-7xl md:flex">
         <Link href="/">
           <AnimatePresence>
             <motion.img
@@ -79,11 +80,12 @@ const Navbar = () => {
         </Link>
 
         <div className="flex items-center">
-          <span className="flex space-x-3 text-gray-800 text-base">
+          <span className="flex space-x-3 text-base text-gray-800">
             {navLinks.map((link) => (
               <Link href={link.href} key={link.href}>
                 <motion.div animate={{ opacity: link.active ? 1 : 0.8 }}>
-                  <a
+                  <button
+                  type="button"
                     className={`text-md hover:text-red-500 font-bold ${
                       link.active
                         ? "text-red-600 underline-offset-8"
@@ -91,10 +93,10 @@ const Navbar = () => {
                     }`}
                   >
                     {link.link}
-                  </a>
+                  </button>
                   {link.active && (
                     <motion.div
-                      className="underline h-1 bg-red-500"
+                      className="h-1 underline bg-red-500"
                       layoutId="underline"
                     />
                   )}
@@ -102,30 +104,23 @@ const Navbar = () => {
               </Link>
             ))}
           </span>
-          <Link href="/contact">
-            <button
-              onClick={() => analytics.track("Goal - 1")}
-              className="ml-4 bg-red-500 rounded-full px-6 font-bold py-2 text-white"
-            >
-          Get Quote
-            </button>
-          </Link>
+
         </div>
       </nav>
       {/* Desktop Nav Ends */}
 
       {/**Mobile Navigation**/}
-      <nav className="flex md:hidden justify-between py-3 px-4">
+      <nav className="flex justify-between px-4 py-3 md:hidden">
         <Link href="/">
           <img
-            className="h-8 object-cover"
+            className="object-cover h-8"
             alt="logo"
             src="/images/logo-red.png"
           />
         </Link>
 
         <RiMenu3Fill
-          className="h-8 w-8 text-red-600"
+          className="w-8 h-8 text-red-600"
           onClick={() => setOpen(!open)}
         />
         <AnimatePresence >
@@ -134,34 +129,26 @@ const Navbar = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute top-0 left-0 w-screen bg-red-600 h-screen flex z-50"
+              className="absolute top-0 left-0 z-50 flex w-screen h-screen bg-red-600"
             >
               <RiCloseFill
-                className="absolute top-10 left-10 h-8 w-8 text-white"
+                className="absolute w-8 h-8 text-white top-10 left-10"
                 onClick={() => setOpen(false)}
               />
-              <div className="flex flex-col px-6 space-y-4 justify-between items-center py-8 w-full">
+              <div className="flex flex-col items-center justify-between w-full px-6 py-8 space-y-4">
                 {navLinks.map((link) => (
                   <Link href={link.href} key={link.href}>
-                    <a
-                      className="text-white font-medium text-xl"
+                    <button
+                      type="button"
+                      className="text-xl font-medium text-white"
                       onClick={() => setOpen(false)}
                     >
                       {link.link}
-                    </a>
+                    </button>
                   </Link>
                 ))}
 
-                <div className="w-full items-center py-4 rounded flex flex-col space-y-4">
-                  <Link href="/contact">
-                    <button
-                      onClick={() => setOpen(false)}
-                      className="ml-4 bg-white rounded-full px-6 font-bold py-2 text-red-600"
-                    >
-                      Get Quote
-                    </button>
-                  </Link>
-                </div>
+
               </div>
             </motion.div>
           )}

@@ -27,8 +27,7 @@ const about: NextPage = () => {
         />
       </Head>
       <AboutHero />
-      {/* <Team /> */}
-      <Partners />
+
     </>
   );
 

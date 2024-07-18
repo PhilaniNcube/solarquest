@@ -16,85 +16,8 @@ type Props = {
 const ContactHero = () => {
 
   const [loading, setLoading] = useState(false)
-  const router = useRouter()
-  const query = router.query
-
-     const url = new URL(`https://solarquest.co.za${router.asPath}`);
-     console.log(url);
-     const source = url.searchParams.get("utm_source");
-     const google = url.searchParams.get("gclid");
-     const facebook = url.searchParams.get("fbclid");
-     const medium = url.searchParams.get("utm_medium");
-
-    const setSource = () => {
-      console.log("referrer", document.referrer);
-
-      if (source && medium) {
-        localStorage.setItem("utm_source", source);
-        localStorage.setItem("utm_medium", medium);
-      } else if (google) {
-        localStorage.setItem("utm_source", "google");
-        localStorage.setItem("utm_medium", "ppc");
-      } else if (facebook) {
-        localStorage.setItem("utm_source", "facebook");
-        localStorage.setItem("utm_medium", "paid social");
-      } else if (source === undefined) {
-        localStorage.setItem("utm_source", "direct");
-        localStorage.setItem("utm_medium", "(not set)");
-      }
-    };
 
 
-
-
-
-
-
-   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-     e.preventDefault();
-     setLoading(true)
-
-         const source = localStorage.getItem("utm_source");
-         const medium = localStorage.getItem("utm_medium");
-
-     const { last_name, first_name, email, telephone, address, electricity } =
-       Object.fromEntries(new FormData(e.currentTarget));
-
-     const request = await fetch("/api/contact", {
-       method: "POST",
-       headers: {
-         "Content-Type": "application/json",
-         Authorization: `Bearer ${process.env.NEXT_PUBLIC_PIPEDRIVE_API_TOKEN}`,
-       },
-       body: JSON.stringify({
-         first_name: first_name,
-         last_name: last_name,
-         email: email,
-         telephone: telephone,
-         address: address,
-         electricity: electricity,
-
-       }),
-     });
-
-     const response = await request.json();
-
-     console.log({status: response.status, message: response.message});
-
-         if (request.status === 400) {
-           alert(
-             "There was an error processing the request. Please check that you have not already submitted a form before, or that your email address is correct."
-           );
-           setLoading(false);
-           return;
-         }
-
-       analytics.track("generate_lead", {
-
-       });
-     setLoading(false)
-     router.push("/thankyou");
-   };
 
   return (
 			<section className="relative">
@@ -122,20 +45,9 @@ const ContactHero = () => {
             </span>{" "}
             +27 10 055 3151
           </article> */}
-						<article className="flex items-start mt-4 text-lg font-medium text-gray-600 md:text-xl">
-							<span>
-								<RiMapPin2Line className="w-6 h-6 mr-3" />
-							</span>{" "}
-							Unit 3 Northgate Business Park, Brooklyn, <br />
-							Cape Town, 7405
-						</article>
 
-						<article className="flex items-start mt-4 text-lg font-medium text-gray-600 md:text-xl">
-							<span>
-								<RiPhoneLine className="w-6 h-6 mr-3" />
-							</span>{" "}
-							+27 21 023 2475
-						</article>
+
+
 						<article className="flex items-start mt-4 text-lg font-medium text-gray-600 md:text-xl">
 							<span>
 								<RiCellphoneLine className="w-6 h-6 mr-3" />
