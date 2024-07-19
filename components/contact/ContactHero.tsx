@@ -159,47 +159,8 @@ const ContactHero = () => {
 									/>
 								</div>
 							</div>
-							<div className="flex flex-col mt-4">
-								<label
-									className="text-sm font-medium placeholder:text-slate-700"
-									htmlFor="address"
-								>
-									Address
-								</label>
-								<input
-									className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
-									type="text"
-									placeholder="Address"
-									required
-									id="address"
-									name="address"
-								/>
-							</div>
-							<div className="grid grid-cols-1 gap-3 mt-4 md:grid-cols-2">
-								<div className="flex flex-col">
-									<label
-										className="text-sm font-medium placeholder:text-slate-700 "
-										htmlFor="electricity"
-									>
-										What is your current electricity bill?
-									</label>
-									<select
-										className="px-4 py-2 text-sm border border-gray-200 rounded-md placeholder:text-slate-700"
-										placeholder="Phone Number"
-										required
-										id="electricity"
-										name="electricity"
-									>
-										<option value="">Select a value</option>
-										<option value="Less than R1500">Less than R1500</option>
-										<option value="R1500-R2500">R1500-R2500</option>
-										<option value="R2501-R4500">R2501-R4500</option>
-										<option value="Greater than R4500">
-											Greater than R4500
-										</option>
-									</select>
-								</div>
-							</div>
+
+
 
 							<button
 								type="submit"
