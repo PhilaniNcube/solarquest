@@ -71,10 +71,6 @@ const About: NextPage = () => {
                   </p>
                 </div>
               </div>
-
-              <p className="text-sm text-gray-500">
-                Thank you for your understanding and continued support.
-              </p>
             </div>
           </div>
         </div>
